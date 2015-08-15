@@ -37,6 +37,7 @@ class Movie(models.Model):
     genre = models.CharField(max_length=100, blank=True, null=True)
     # studio = models.CharField(max_length=255, blank=True, null=True)
     poster = models.ImageField(upload_to='posters', blank=True, null=True)
+    description = models.TextField(null=True, blank=True)
     arthur = models.ForeignKey('Arthur')
 
     def __unicode__(self):
