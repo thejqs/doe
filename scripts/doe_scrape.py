@@ -138,7 +138,7 @@ class Scraper():
 
             cast_crew_jobs, cast_crew_tree = Scraper.get_coworkers(cast_and_crew_url)
 
-            # context = Scraper.collect_context(movie_tree, cast_crew_tree)
+            context = Scraper.collect_context(movie_tree, cast_crew_tree)
             # print context
 
             cast_crew_data = Scraper.scrape_data(cast_crew_jobs, cast_crew_tree)
@@ -182,9 +182,13 @@ class Scraper():
                 crew_name_xpath = '//*[@id="fullcredits_content"]/table[%d]/tbody/tr/td[1]/a/text()' % (current_credit + 1)
                 crew_job_xpath = '//*[@id="fullcredits_content"]/table[%d]/tbody/tr/td[3]/text()' % (current_job_title + 1)
 
-                # strips the trailing newline characters off the crew members' names
+                # strips trailing newline characters off crew members' names
+                # also decomposes unicode/ascii values to base characters
                 cast_and_crew[job] = [name.strip() if isinstance(name, str) else unicodedata.normalize('NFKD', name.strip()).encode('ascii', 'ignore') for name in cast_crew_tree.xpath(crew_name_xpath)]
 
+                # but if you're thinking this is the ugliest list comprehension
+                # in the known universe, you're not wrong
+                # gives me something to come back to later now that it works
                 job_titles[job] = [title.strip() if isinstance(title, str) else unicodedata.normalize('NFKD', title.strip()).encode('ascii', 'ignore') for title in cast_crew_tree.xpath(crew_job_xpath)]
 
             else:
