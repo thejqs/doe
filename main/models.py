@@ -1,7 +1,5 @@
 from django.db import models
 
-# Create your models here.
-
 
 class Arthur(models.Model):
     born = models.DateTimeField()
@@ -23,6 +21,9 @@ class ArthurChild(models.Model):
     # married = models.DateTimeField
     # divorced = models.DateTimeField()
 
+    def __unicode__(self):
+        return self.name
+
 
 # class ArthurGrandchild(models.Model):
 #     name = models.CharField(max_length=100)
@@ -34,7 +35,7 @@ class Movie(models.Model):
     title = models.CharField(max_length=255)
     year_released = models.DateTimeField()
     genre = models.CharField(max_length=100, blank=True, null=True)
-    studio = models.CharField(max_length=255, blank=True, null=True)
+    # studio = models.CharField(max_length=255, blank=True, null=True)
     poster = models.ImageField(upload_to='posters', blank=True, null=True)
     arthur = models.ForeignKey('Arthur')
 
@@ -44,7 +45,7 @@ class Movie(models.Model):
 
 class CastMember(models.Model):
     name = models.CharField(max_length=120)
-    character = models.CharField(max_length=120, null=True, blank=True)
+    # character = models.CharField(max_length=120, null=True, blank=True)
     movie = models.ManyToManyField('Movie')
 
     def __unicode__(self):
