@@ -9,3 +9,5 @@ With whom did he work most frequently? On what? How did that change decade to de
 The gender pronoun there is intentional. This was written with someone in mind.
 
 That's why this is called Arthur. Arthur Piantadosi was my grandfather, although I called him Doe. Just so happens he was a sound man.
+
+IMDB's records are limited. Movie credits used to only credit the sound department or the department head rather than the crew members themselves. This is a project that could be updated later should I get access to, say, old studio payroll records that can show me what specifically my grandfather worked on that's not reflected here. Meantime, this is what I can do.
