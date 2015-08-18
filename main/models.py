@@ -33,15 +33,15 @@ class ArthurChild(models.Model):
 
 class Movie(models.Model):
     title = models.CharField(max_length=255)
-    year_released = models.DateTimeField()
+    year_released = models.IntegerField()
     genre = models.CharField(max_length=100, blank=True, null=True)
     # studio = models.CharField(max_length=255, blank=True, null=True)
     poster = models.ImageField(upload_to='posters', blank=True, null=True)
     description = models.TextField(null=True, blank=True)
-    arthur = models.ForeignKey('Arthur')
+    # arthur = models.ForeignKey('Arthur')
 
     def __unicode__(self):
-        return self.title, self.year_released
+        return self.title, '%s' % str(self.year_released)
 
 
 class CastMember(models.Model):
@@ -53,9 +53,10 @@ class CastMember(models.Model):
         return self.name, self.character
 
 
-class CrewMember(models.model):
+class CrewMember(models.Model):
     name = models.CharField(max_length=120)
-    job = models.CharField(max_length=120)
+    # job_category = models.CharField(max_length=120)
+    job_title = models.CharField(max_length=200, blank=True, null=True)
     movie = models.ManyToManyField('Movie')
 
     def __unicode__(self):
