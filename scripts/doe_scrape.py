@@ -6,7 +6,7 @@ A scrape script to take a person's IMDB page, open the filmography urls
 and then each movie page and capture the cast and crew of each movie.
 The one provided is for Arthur Piantadosi, sound man and my grandfather.
 
-In progress. Emphasis on movies.
+In progress. Emphasis on movies for now.
 
 
 """
@@ -86,8 +86,9 @@ class Scraper():
             genre_xpath = '//*[@id="overview-top"]/div[2]/a/span/text()'
 
         else:
-            movie_year_xpath = '//*[@id="overview-top"]/h1/span[2]/text()'
-            genre_xpath = '//*[@id="overview-top"]/div[1]/a/span/text()'
+            # movie_year_xpath = '//*[@id="overview-top"]/h1/span[2]/text()'
+            # genre_xpath = '//*[@id="overview-top"]/div[1]/a/span/text()'
+            print "Yep. TV show. Do not want."
 
         movie_year = cast_crew_tree.xpath(movie_year_xpath)
         if len(movie_year) == 1:
@@ -157,7 +158,8 @@ class Scraper():
         if '<h2>Episodes' not in movie_html:
             cast_crew_href_xpath = '//*[@id="overview-top"]/div[6]/span[2]/a/@href'
         else:
-            cast_crew_href_xpath = '//*[@id="overview-top"]/div[3]/span[2]/a/@href'
+            # cast_crew_href_xpath = '//*[@id="overview-top"]/div[3]/span[2]/a/@href'
+            print "This is a TV show. Ignore it."
 
         cast_crew_href = movie_tree.xpath(cast_crew_href_xpath)
 
@@ -184,9 +186,9 @@ class Scraper():
     def scrape():
         movie_links = Scraper.capture_filmography("http://www.imdb.com/name/nm0681250/?ref_=fn_al_nm_1")
 
-        # Movie.objects.all().delete()
-        # CastMember.objects.all().delete()
-        # CrewMember.objects.all().delete()
+        Movie.objects.all().delete()
+        CastMember.objects.all().delete()
+        CrewMember.objects.all().delete()
 
         for movie, href in movie_links.items():
             # this is the only TV show on this particular list.
@@ -198,7 +200,7 @@ class Scraper():
 
                 cast_crew_jobs, cast_crew_html, cast_crew_tree = Scraper.get_coworkers(cast_and_crew_url)
 
-                context = Scraper.collect_context(movie_tree, movie_html, cast_crew_tree)
+                all_context = Scraper.collect_context(movie_tree, movie_html, cast_crew_tree)
                 # print context
 
                 cast_crew_data = Scraper.scrape_data(cast_crew_jobs, cast_crew_html, cast_crew_tree)
@@ -284,7 +286,7 @@ class Scraper():
                     print person
                     print title
                     print "\n\n"
-                    crew, created = CrewMember.objects.get_or_create(name=person, job_title=title)
+                    crew = CrewMember.objects.create(name=person, job_title=title)
 
 
         # merged_dict['Series Cast'] = cast_and_crew['Series Cast']
@@ -295,7 +297,7 @@ class Scraper():
             print 'Cast'
             print actor
             print "\n\n"
-            name, created = CastMember.objects.get_or_create(name=actor)
+            name = CastMember.objects.create(name=actor)
 
     # merged_dict['Series Cast'] = cast_and_crew['Series Cast']
 

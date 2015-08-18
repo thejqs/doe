@@ -49,8 +49,17 @@ class CastMember(models.Model):
     # character = models.CharField(max_length=120, null=True, blank=True)
     movie = models.ManyToManyField('Movie')
 
+    # class Meta:
+    #     unique_together = ['name', 'movie']
+
+    # def __iter__(self):
+    #     return [
+    #         self.name
+    #         # self.movie.title
+    #     ]
+
     def __unicode__(self):
-        return self.name, self.character
+        return self.name, self.movie_set.movie #, self.character
 
 
 class CrewMember(models.Model):
@@ -59,5 +68,15 @@ class CrewMember(models.Model):
     job_title = models.CharField(max_length=200, blank=True, null=True)
     movie = models.ManyToManyField('Movie')
 
+    # class Meta:
+    #     unique_together = ['name', 'job_title', 'movie']
+
+    # def __iter__(self):
+    #     return [
+    #         self.name,
+    #         self.job_title,
+    #         # self.movie.title
+    #     ]
+
     def __unicode__(self):
-        return self.name, self.job
+        return self.name, self.job_title
