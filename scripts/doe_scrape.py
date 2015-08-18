@@ -6,6 +6,8 @@ A scrape script to take a person's IMDB page, open the filmography urls
 and then each movie page and capture the cast and crew of each movie.
 The one provided is for Arthur Piantadosi, sound man and my grandfather.
 
+In progress. Emphasis on movies.
+
 
 """
 
@@ -91,6 +93,8 @@ class Scraper():
         if len(movie_year) == 1:
             movie_year_final = Scraper.clean_int_from_ugly_string(movie_year)
         else:
+            # not my favorite to hard-code it. temporary as I worked out an issue with
+            # TV shows -- of which there is only one involved here.
             movie_year_final = 1962
         # print type(movie_year_final)
 
@@ -124,6 +128,7 @@ class Scraper():
             movie.poster.save('%s.jpg' % movie_title, File(poster_temp))
             movie.save()
         else:
+            # one movie with no poster. what even is life.
             print "Ain't no poster here."
         # movie.save()
 
@@ -179,11 +184,14 @@ class Scraper():
     def scrape():
         movie_links = Scraper.capture_filmography("http://www.imdb.com/name/nm0681250/?ref_=fn_al_nm_1")
 
-        Movie.objects.all().delete()
-        CastMember.objects.all().delete()
-        CrewMember.objects.all().delete()
+        # Movie.objects.all().delete()
+        # CastMember.objects.all().delete()
+        # CrewMember.objects.all().delete()
 
         for movie, href in movie_links.items():
+            # this is the only TV show on this particular list.
+            # resolved about half the issues with scraping it
+            # and will have to cme back to this.
             if movie != "The Jack Benny Program":
 
                 cast_and_crew_url, movie_tree, movie_html = Scraper.find_coworkers(href)
