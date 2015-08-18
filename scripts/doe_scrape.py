@@ -96,7 +96,8 @@ class Scraper():
         else:
             # not my favorite to hard-code it. temporary as I worked out an issue with
             # TV shows -- of which there is only one involved here.
-            movie_year_final = 1962
+            # movie_year_final = 1962
+            print "Like I said about that whole TV show thing."
         # print type(movie_year_final)
 
         movie_genre = movie_tree.xpath(genre_xpath)
