@@ -16,9 +16,12 @@ for row in doe_crew_csv:
 # for row in names.items():
 #     writer.writerow(row)
 
-for times in sorted(jobs, key=jobs.get, reverse=True):
-  print times, jobs[times]
+# for times in sorted(jobs, key=jobs.get, reverse=True):
+#   print times, jobs[times]
 
 for times in sorted(names, key=names.get, reverse=True):
     print times, names[times]
+
+# print len(names)
+# print len(jobs)
     

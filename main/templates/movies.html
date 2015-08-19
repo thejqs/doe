@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <div class="container">
+        <div class="timeline">
+            <div class="vertical-bar"></div>
+        {% for year, year_movies in movies.items %}
+
+                <div class="year">
+
+                    <div class="shift-left">
+
+                {% for context in year_movies %}
+
+                        <div class="movie">
+                                        {% if context.poster %}
+
+                                        <a class="revealmovie" href="#"><img src="{{ context.poster.url }}" alt="this is the poster for {{ context.title }}"></a>
+                                 
+                                    {% endif %}
+
+
+                                <div class="movie-details">
+                                <h3><b>{{ context.title }}</b></h3>
+
+                                    <p class="year-released">
+                                        {{ context.year_released }}</p>
+                                        <ul class="genres">{% for genre in context.genres %}
+                                       <li>{{ genre }}</li>
+
+                                        {% endfor %}
+                                        </ul>
+                                        <p class="description">{{ context.description }}</p>
+                                    </div>
+                                 </div>
+                            {% if forloop.counter == forloop.revcounter or forloop.counter == forloop.revcounter|add:"-1" %}
+
+                                </div>
+                                <div class="shift-right">
+                                
+                            {% endif %}
+                        {% endfor %}
+                                </div>
+                    </div>
+            
+                    {% endfor %}           
+        </div>
+    </div>
+{% endblock %}

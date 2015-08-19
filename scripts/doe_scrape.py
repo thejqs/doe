@@ -130,7 +130,7 @@ class Scraper():
             movie.poster.save('%s.jpg' % movie_title, File(poster_temp))
             movie.save()
         else:
-            # one movie with no poster. what even is life.
+            # three movies with no poster. what even is life.
             print "Ain't no poster here."
         # movie.save()
 

@@ -41,7 +41,7 @@ class Movie(models.Model):
     # arthur = models.ForeignKey('Arthur')
 
     def __unicode__(self):
-        return self.title, '%s' % str(self.year_released)
+        return self.title #, '%s' % str(self.year_released)
 
 
 class CastMember(models.Model):

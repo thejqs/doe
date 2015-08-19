@@ -1,0 +1,14 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arthur.</title>
+        <link rel="stylesheet" href="{% static 'css/doe.css' %}" type="text/css">
+    </head>
+    <body>
+        {% block content %}
+        {% endblock %}
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="{% static 'js/doe.js' %}"></script>
+    </body>
+</html>
