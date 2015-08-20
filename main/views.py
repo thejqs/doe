@@ -15,6 +15,9 @@ from main.models import Arthur, Movie, CrewMember, CastMember
 
 # Create your views here.
 
+def arthur(request):
+    return render(request, 'arthur.html')
+    
 
 def movies(request):
     context = {}
@@ -39,6 +42,6 @@ def movies(request):
             # }
         # print movies_dict
     context['movies'] = movies_by_year
-    print movies_by_year
+    # print movies_by_year
 
     return render(request, 'movies.html', context)

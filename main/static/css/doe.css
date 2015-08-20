@@ -1,5 +1,6 @@
-.container {
+body {
     background-color: #E6E6FA;
+    /*padding-bottom: 15px;*/
 }
 
 .movie-details {
@@ -13,6 +14,11 @@
     font-family: "Montserrat", sans-serif;
 }
 
+.arthur-link {
+    text-decoration: none;
+    color: #808080;
+}
+
 #arthur {
     color: #808080;
     width: 20%;
@@ -20,6 +26,24 @@
     padding-top: 15px;
     font-family: "Montserrat", sans-serif;
     margin: auto;
+}
+
+.doe-text {
+    color: #808080;
+    width: 60%;
+    text-align: left;
+    padding-top: 15px;
+    font-family: "Montserrat", sans-serif;
+    margin: auto;
+}
+
+#centered-small-film-icon {
+    display: inline;
+    text-align: center;
+}
+
+.small-film-icon {
+    position: relative;
 }
 
 .movie {

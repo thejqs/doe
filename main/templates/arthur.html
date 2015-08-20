@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{%load staticfiles %}
+
+{% block content %}
+        <div class="container">
+            <div id="arthur">
+                <h1><p>Arthur.</p></h1>
+                <hr>
+                <p><a class="arthur-link" href="../movies/">film</a> | cast & crew</p>
+            </div>
+            <div class="doe-text">
+                <p>Arthur Piantadosi was my grandfather. I called him Doe. He was a sound engineer. Worked on movies. This project is based on his work.</p>
+                <p>This began as an attempt to learn web scraping. Starting at his IMDB page, I wrote a script to open the links in his filmography to each movie, capture contextual data, then open the links to the cast and crew of each movie IMDB knows about.</p>
+                <p>But it's incomplete. Necessarily so. IMDB's records are limited. Sound engineers are one of the underappreciated classes of technical contributors to movies. Movie credits used to only list the sound department or the department head rather than the crew members themselves. This is a project that could be updated later should I get access to, say, old studio payroll records that can show me what specifically my grandfather worked on that's not reflected here.</p> 
+                <p>Meantime, this is what I can do.</p>
+                <span class="small-film-icon fa fa-film"><span>                
+
+            </div>
+            </div>
+        </div>
+{% endblock %}
