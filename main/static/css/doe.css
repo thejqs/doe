@@ -1,0 +1,84 @@
+.container {
+    background-color: #E6E6FA;
+}
+
+.movie-details {
+    display: none;
+    position: fixed;
+    text-align: left;
+    top: 100px;
+    right: 100px;
+    width: 200px;
+    color: #808080;
+    font-family: "Helvetica", sans-serif;
+}
+
+#arthur {
+    color: #808080;
+    width: 60%;
+    font-family: 'Helvetica', sans-serif;
+    margin: auto;
+}
+
+.movie {
+    margin: 10px;
+    min-width: 55px;
+    display: inline-block;
+}
+
+/*.movie:nth-child(even) {*/
+    /*float: left;*/
+/*}*/
+
+/*.movie:nth-child(odd) {*/
+    /*float: right;*/
+/*}*/
+
+.movie img {
+    height: 125px;
+}
+
+.year {
+    clear: both;
+    position: relative;
+    height: 150px;
+    /*display: inline-block;*/
+}
+
+.timeline {
+    position: relative;
+    width: 85%;
+    text-align: center;
+}
+
+.vertical-bar {
+    width: 1px;
+    background-color: #bbb;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+
+.year:nth-child(even) .shift-left {
+    right: 50%;
+}
+
+.year:nth-child(even) .shift-right {
+    left: 50%;
+}
+
+.year:nth-child(odd) .shift-left {
+    left: 50%;
+}
+
+.year:nth-child(odd) .shift-right {
+    right: 50%;
+}
+
+.shift-left, .shift-right {
+    /*border: 1px solid blue;*/
+    display: inline-block;
+    position: absolute;
+    top: 0;
+}
