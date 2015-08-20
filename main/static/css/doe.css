@@ -3,15 +3,54 @@ body {
     /*padding-bottom: 15px;*/
 }
 
+h1 {
+    font-weight: bold;
+    font-size: 60px;
+    margin: auto;
+}
+
+p {
+    line-height: 24px;
+}
+
+ul {
+    padding-left: 0
+}
+
+ul li {
+    list-style-type: none; 
+    list-style-position: inside; 
+}
+
+ul li:before {
+    content: "\f008";
+    font-family: "FontAwesome";
+    margin-right: 5px;
+    display: inline-block;
+}
+
 .movie-details {
     display: none;
     position: fixed;
     text-align: left;
-    top: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #F5F5F5;
+    top: 150px;
     right: 100px;
     width: 200px;
     color: #808080;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans Condensed", sans-serif;
+    z-index: 1;
+}
+
+.arthur-choice {
+    padding-top: 10px;
+    text-align: center;
+    margin: auto;
+    color: #808080;
+    font-family: "Open Sans Condensed", sans-serif;
+    width: 30%;
 }
 
 .arthur-link {
@@ -23,9 +62,20 @@ body {
     color: #808080;
     width: 20%;
     text-align: center;
-    padding-top: 15px;
+    padding-top: 75px;
     font-family: "Montserrat", sans-serif;
     margin: auto;
+}
+
+.page-identifier {
+    color: black;
+    width: 20%;
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 20px;
+    font-family: "Open Sans Condensed", sans-serif;
+    margin: auto;
+
 }
 
 .doe-text {
@@ -33,17 +83,19 @@ body {
     width: 60%;
     text-align: left;
     padding-top: 15px;
-    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-family: "Open Sans Condensed", sans-serif;
     margin: auto;
 }
 
-#centered-small-film-icon {
+/*#centered-small-film-icon {
     display: inline;
     text-align: center;
 }
-
-.small-film-icon {
-    position: relative;
+*/
+span {
+    display: inline-block;
+    text-align: center;
 }
 
 .movie {
@@ -73,7 +125,7 @@ body {
 
 .timeline {
     position: relative;
-    width: 85%;
+    width: 75%;
     text-align: center;
 }
 
@@ -82,6 +134,16 @@ body {
     background-color: #bbb;
     height: 100%;
     position: absolute;
+    top: 0;
+    left: 50%;
+}
+
+.vertical-details-bar {
+    width: 1px;
+    background-color: #bbb;
+    height: 100%;
+    float: left;
+    position: relative;
     top: 0;
     left: 50%;
 }
@@ -107,4 +169,20 @@ body {
     display: inline-block;
     position: absolute;
     top: 0;
+}
+
+@media only screen and (max-width: 999px) {
+  /* rules that only apply for canvases narrower than 1000px */
+}
+
+@media only screen and (device-width: 768px) and (orientation: landscape) {
+  /* rules for iPad in landscape orientation */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .movie-details {
+            overflow: scroll;
+    }
+
+
 }

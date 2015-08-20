@@ -2,33 +2,47 @@ from django.db import models
 
 
 class Arthur(models.Model):
-    born = models.DateTimeField()
-    died = models.DateTimeField()
-    moved_to_la = models.DateTimeField()
-    married_year = models.DateTimeField()
-    crew_member = models.OneToOneField('CrewMember')
+    born = models.IntegerField()
+    died = models.IntegerField()
+    moved_to_la = models.IntegerField()
+    married_year = models.IntegerField()
+    crew_member = models.OneToOneField('CrewMember', null=True, blank=True)
     arthur_image = models.ImageField(upload_to='arthur', blank=True, null=True)
 
     def __unicode__(self):
-        return self.crew_member.name
+        if self.crew_member:
+            return "%s" % self.crew_member.name
+        else: 
+            return "Arthur Piantadosi, born in New York in %d" % self.born
+
+    class Meta:
+        verbose_name = 'Arthur'
+        verbose_name_plural = 'Arthur'
 
 
-class ArthurChild(models.Model):
+# class ArthurChild(models.Model):
+#     name = models.CharField(max_length=100)
+#     born = models.IntegerField()
+#     died = models.IntegerField()
+#     father = models.ForeignKey('Arthur')
+#     # married = models.DateTimeField
+#     # divorced = models.DateTimeField()
+
+#     def __unicode__(self):
+#         return self.name
+
+
+class ArthurGrandchild(models.Model):
     name = models.CharField(max_length=100)
-    born = models.DateTimeField()
-    died = models.DateTimeField()
-    father = models.ForeignKey('Arthur')
-    # married = models.DateTimeField
-    # divorced = models.DateTimeField()
+    born = models.IntegerField()
+    grandfather = models.ForeignKey('Arthur')
 
     def __unicode__(self):
         return self.name
 
-
-# class ArthurGrandchild(models.Model):
-#     name = models.CharField(max_length=100)
-#     born = models.DateTimeField()
-#     grandfather = models.ForeignKey('Arthur')
+    class Meta:
+        verbose_name = 'Grandchild'
+        verbose_name_plural = 'Grandchildren'
 
 
 class Movie(models.Model):
@@ -79,4 +93,4 @@ class CrewMember(models.Model):
     #     ]
 
     def __unicode__(self):
-        return self.name, self.job_title
+        return "%s, %s" % (self.name, self.job_title)

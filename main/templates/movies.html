@@ -1,15 +1,13 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
-    
 
 
 {% block content %}
     <div class="container">
-            <div id="arthur">
-                <a class="arthur-link" href="../main/"><h1><p>Arthur.</p></h1></a>
-                <hr>
+        <div class="page-identifier">
                 <p>film</p>
-            </div>
+        </div>
+
             <div class="timeline">
                 <div class="vertical-bar"></div>
                     {% for year, year_movies in movies.items %}
@@ -27,28 +25,39 @@
 
                                                 {% else %}
 
-                                                    <a class="revealmovie" href="#"><img src="{% static 'img/video.png' %}" alt="This movie had no poster, so we used a freely available illustration of film instead."></a>
+                                                    <a class="revealmovie" href="#"><img src="{% static 'img/Film-3-icon.png' %}" alt="This movie had no poster, so we used a freely available illustration of cellulose film instead."></a>
                                  
                                                 {% endif %}
 
 
-                                         <div class="movie-details">
-                                              <h3><b>{{ context.title }}</b></h3>
+                                                 <div class="movie-details">
+                                                    <div class="vertical-details-bar"></div>
+                                                      <h3><b>{{ context.title }}</b></h3>
 
-                                                <p class="year-released">
-                                                {{ context.year_released }}</p>
-                                                <ul class="genres">{% for genre in context.genres %}
-                                                        <li>{{ genre }}</li>
-                                {% endfor %}
-                                                </ul>
+                                                        <p class="year-released">{{ context.year_released }}</p>
+                                                        <ul class="genres">
+                                                            {% for genre in context.genres %}
+                                                                <li>{{ genre }}</li>
+                                                            {% endfor %}
+
+                                                        </ul>
+                                                        
                                                 <p class="description">{{ context.description }}</p>
+
+                                                        <p>Arthur turned {{ context.age }} years old that year. He had been in Los Angeles for {{ context.arthur_in_la }} years and married for {{ context.arthur_married }}.</p>
+
+                                                    {% if context.grandchild_count >= 1 %}
+                                                        
+                                                        <p>His grandchildren by that year: {{ context.grandchild_count }}. </p> 
+                                                        {% endif %}
+   
+
+
                                         </div>
                                     </div>
                             {% if forloop.counter == forloop.revcounter or forloop.counter == forloop.revcounter|add:"-1" %}
-
                                 </div>
-                                <div class="shift-right">
-                                
+                                <div class="shift-right">                                
                             {% endif %}
                         {% endfor %}
                             </div>
