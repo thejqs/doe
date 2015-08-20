@@ -1,12 +1,18 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
+    
 
 
 {% block content %}
     <div class="container">
-        <div class="timeline">
-            <div class="vertical-bar"></div>
-                {% for year, year_movies in movies.items %}
+            <div id="arthur">
+                <h1><p>Arthur.</p></h1>
+                <hr>
+                <p>film</p>
+            </div>
+            <div class="timeline">
+                <div class="vertical-bar"></div>
+                    {% for year, year_movies in movies.items %}
 
                         <div class="year">
 

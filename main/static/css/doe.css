@@ -10,13 +10,15 @@
     right: 100px;
     width: 200px;
     color: #808080;
-    font-family: "Helvetica", sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 #arthur {
     color: #808080;
-    width: 60%;
-    font-family: 'Helvetica', sans-serif;
+    width: 20%;
+    text-align: center;
+    padding-top: 15px;
+    font-family: "Montserrat", sans-serif;
     margin: auto;
 }
 
