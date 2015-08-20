@@ -6,6 +6,10 @@
         <link rel="stylesheet" href="{% static 'css/doe.css' %}" type="text/css">
     </head>
     <body>
+        {% block top %}
+        {% endblock %}
+
+
         {% block content %}
         {% endblock %}
         <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
