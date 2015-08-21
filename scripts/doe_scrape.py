@@ -134,7 +134,7 @@ class Scraper():
             print "Ain't no poster here."
         # movie.save()
 
-        return all_context
+        return all_context, movie
 
     # cleans up the movie year, which comes in as, you guessed it,
     # an ugly string.
@@ -201,16 +201,16 @@ class Scraper():
 
                 cast_crew_jobs, cast_crew_html, cast_crew_tree = Scraper.get_coworkers(cast_and_crew_url)
 
-                all_context = Scraper.collect_context(movie_tree, movie_html, cast_crew_tree)
+                all_context, movie = Scraper.collect_context(movie_tree, movie_html, cast_crew_tree)
                 # print context
 
-                cast_crew_data = Scraper.scrape_data(cast_crew_jobs, cast_crew_html, cast_crew_tree)
+                cast_crew_data = Scraper.scrape_data(cast_crew_jobs, cast_crew_html, cast_crew_tree, movie)
 
             # print movie #, cast_crew_data
 
     # grabs the main target data, does the heaviest lifting
     @staticmethod
-    def scrape_data(cast_crew_jobs, cast_crew_html, cast_crew_tree):
+    def scrape_data(cast_crew_jobs, cast_crew_html, cast_crew_tree, movie):
 
         # prepares for a loop
         current_credit = 0
@@ -288,6 +288,7 @@ class Scraper():
                     print title
                     print "\n\n"
                     crew = CrewMember.objects.create(name=person, job_title=title)
+                    crew.movie.add(movie)
 
 
         # merged_dict['Series Cast'] = cast_and_crew['Series Cast']
@@ -299,6 +300,7 @@ class Scraper():
             print actor
             print "\n\n"
             name = CastMember.objects.create(name=actor)
+            name.movie.add(movie)
 
     # merged_dict['Series Cast'] = cast_and_crew['Series Cast']
 

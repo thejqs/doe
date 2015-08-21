@@ -37,7 +37,7 @@ def movies(request):
         count = 0
 
         for grandchild in grandchildren:
-            if movie.year_released > grandchild.born:
+            if movie.year_released >= grandchild.born:
                 year_dif = grandchild.born - movie.year_released
                 count += 1
             else:
@@ -74,3 +74,11 @@ def movies(request):
     # print movies_by_year
 
     return render(request, 'movies.html', context)
+
+
+def cast_and_crew(request):
+    context = {}
+
+
+
+    return render(request, context)

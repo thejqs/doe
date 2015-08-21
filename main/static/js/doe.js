@@ -8,7 +8,6 @@ $('.revealmovie').click(function(e) {
     }
 });
 
-
 $('.backdrop').click(function(e) {
     $('.movie-details').fadeOut()
     e.stopPropagation();

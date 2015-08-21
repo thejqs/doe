@@ -5,7 +5,7 @@
 {% block content %}
     <div class="container">
         <div class="page-identifier">
-                <a class="oscar-link" href="https://youtu.be/66vTeZSJId4?t=7m14s" target="_blank"><p>film</p></a>
+                <a class="oscar-link" href="https://youtu.be/66vTeZSJId4?t=7m14s" target="_blank" alt="Video: Arthur Piantadosi and his colleagues win an Academy Award for 'All the President's Men'" name="Arthur Piantadosi and Oscar."><p>film</p></a>
         </div>
 
             <div class="timeline">
@@ -35,7 +35,15 @@
                                                     <div class="movie-details">
                                                     <div class="backdrop"></div>
                                                     <div class="movie-details-inner">
-                                                    {# <img src="{{ context.poster.url }}" alt="A larger view of the poster for {{ context.title }}"> #}
+
+
+                                                    {% if context.poster %}
+                                                    <img src="{{ context.poster.url }}" alt="A larger view of the poster for {{ context.title }}">
+                                                    {% else %}
+                                                    <img src="{% static 'img/Film-3-icon.png' %}" alt="This movie had no poster on IMDB, so we used a freely available illustration of cellulose film instead.">
+                                                    {% endif %}
+
+                                                    
                                                       <h3><b>{{ context.title }}</b></h3>
 
                                                         <p class="year-released">{{ context.year_released }}</p>
@@ -52,9 +60,10 @@
 
                                                     {% if context.grandchild_count >= 1 %}
                                                         
-                                                        <p>His grandchildren by that year: {{ context.grandchild_count }}. </p> 
+                                                        <p>His grandchildren by the end of that year: {{ context.grandchild_count }}. </p> 
                                                     {% endif %}
                                                     </div>
+
 
                                         </div>
                                     </div>

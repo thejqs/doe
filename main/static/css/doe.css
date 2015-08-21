@@ -66,9 +66,10 @@ ul li:before {
     padding-left: 10px;
     padding-right: 10px;
     background-color: rgba(245, 245, 245, .8);
-    top: 150px;
-    right: 100px;
-    width: 200px;
+    top: 100px;
+    right: 150px;
+    width: 300px;
+    margin-bottom: 15px;
     color: #808080;
     font-family: "Open Sans Condensed", sans-serif;
     z-index: 2;
@@ -79,12 +80,11 @@ ul li:before {
     z-index: 1;
 }
 
-.movie-details img {
+.movie-details-inner img {
     display: block;
     height: 250px;
-}
-
-.doe-mug {
+    margin: auto;
+    padding-top: 20px;
 }
 
 .doe-mug img {
@@ -171,7 +171,7 @@ span {
     /*float: right;*/
 /*}*/
 
-.movie img {
+.revealmovie img {
     height: 125px;
 }
 
@@ -231,6 +231,18 @@ span {
     top: 0;
 }
 
+.footer {
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 8px;
+    text-align: right;
+    color: #808080;
+    padding-bottom: 15px;
+}
+
+.footer-hr {
+    width: 75%;
+}
+
 @media only screen and (max-width: 1545px) and (min-width: 1000px) {
 
     .year {
@@ -241,7 +253,7 @@ span {
         margin: 5px;
     }
 
-    .movie img {
+    .revealmovie img {
         height: 95px;
     }
 }
@@ -251,8 +263,12 @@ span {
         position: static;
     }
 
+    .page-identifier {
+    padding-bottom: 10px;
+ }
+
     .year {
-        margin-top: 50px;
+        margin-top: 40px;
     }
 
     .vertical-bar {
@@ -263,11 +279,19 @@ span {
         display: block;
         margin: auto;
         font-size: 20px;
+        color: #808080;
         font-family: "Open Sans Condensed", sans-serif;
     }
 
     .timeline {
         width: 100%;
+    }
+
+    .movie-details-inner {
+        position: absolute;
+        margin: auto;
+        top: 0px;
+        width: 200px;
     }
 
     .backdrop {
@@ -286,7 +310,5 @@ span {
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    .movie-details {
-            overflow: scroll;
-    }
+
 }
