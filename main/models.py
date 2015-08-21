@@ -12,7 +12,7 @@ class Arthur(models.Model):
     def __unicode__(self):
         if self.crew_member:
             return "%s" % self.crew_member.name
-        else: 
+        else:
             return "Arthur Piantadosi, born in New York in %d" % self.born
 
     class Meta:

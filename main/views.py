@@ -27,7 +27,8 @@ def movies(request):
 
     movies = Movie.objects.all().order_by('year_released')
 
-    arthur = Arthur.objects.values('born', 'died', 'moved_to_la', 'married_year')
+    arthur = Arthur.objects.first()
+    # arthur = Arthur.objects.values('born', 'died', 'moved_to_la', 'married_year')
 
     grandchildren = ArthurGrandchild.objects.all()
 
@@ -44,11 +45,14 @@ def movies(request):
 
         movie.grandchild_count = count
 
-        movie.arthur_married = movie.year_released - arthur[0]['married_year']
+        movie.arthur_married = movie.year_released - arthur.married_year
+        # [0]['married_year']
 
-        movie.arthur_in_la = movie.year_released - arthur[0]['moved_to_la']
+        movie.arthur_in_la = movie.year_released - arthur.moved_to_la
+        # [0]['moved_to_la']
 
-        movie.age = movie.year_released - arthur[0]['born']
+        movie.age = movie.year_released - arthur.born
+        # [0]['born']
 
         movie.genres = ast.literal_eval(movie.genre)
 

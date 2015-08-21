@@ -5,7 +5,7 @@
 {% block content %}
     <div class="container">
         <div class="page-identifier">
-                <p>film</p>
+                <a class="oscar-link" href="https://youtu.be/66vTeZSJId4?t=7m14s" target="_blank"><p>film</p></a>
         </div>
 
             <div class="timeline">
@@ -16,12 +16,12 @@
 
                             <div class="movie-year"><p>{{ year }}</p></div>
 
-                            <div class="shift-left">
+                                <div class="shift-left">
 
-                                {% for context in year_movies %}
+                                   {% for context in year_movies %}
 
 
-                                    <div class="movie">
+                                          <div class="movie">
                                                 {% if context.poster %}
 
                                                     <a class="revealmovie" href="#"><img src="{{ context.poster.url }}" alt="This is the poster for {{ context.title }}"></a>
@@ -32,9 +32,10 @@
                                  
                                                 {% endif %}
 
-
-                                                 <div class="movie-details">
-                                                    <div class="vertical-details-bar"></div>
+                                                    <div class="movie-details">
+                                                    <div class="backdrop"></div>
+                                                    <div class="movie-details-inner">
+                                                    {# <img src="{{ context.poster.url }}" alt="A larger view of the poster for {{ context.title }}"> #}
                                                       <h3><b>{{ context.title }}</b></h3>
 
                                                         <p class="year-released">{{ context.year_released }}</p>
@@ -52,9 +53,8 @@
                                                     {% if context.grandchild_count >= 1 %}
                                                         
                                                         <p>His grandchildren by that year: {{ context.grandchild_count }}. </p> 
-                                                        {% endif %}
-   
-
+                                                    {% endif %}
+                                                    </div>
 
                                         </div>
                                     </div>
@@ -68,4 +68,5 @@
                 {% endfor %}           
         </div>
     </div>
+
 {% endblock %}
