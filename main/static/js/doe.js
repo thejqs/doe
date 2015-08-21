@@ -7,3 +7,9 @@ $('.revealmovie').click(function(e) {
         $(this).next().fadeIn()
     }
 });
+
+
+$('.backdrop').click(function(e) {
+    $('.movie-details').fadeOut()
+    e.stopPropagation();
+});
