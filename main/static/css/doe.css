@@ -29,13 +29,17 @@ ul li:before {
     display: inline-block;
 }
 
+.movie-year {
+    display: none;
+}
+
 .movie-details {
     display: none;
     position: fixed;
     text-align: left;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: #F5F5F5;
+    background-color: rgba(245, 245, 245, .8);
     top: 150px;
     right: 100px;
     width: 200px;
@@ -60,11 +64,14 @@ ul li:before {
 
 #arthur {
     color: #808080;
-    width: 20%;
     text-align: center;
     padding-top: 75px;
     font-family: "Montserrat", sans-serif;
     margin: auto;
+}
+
+#arthur hr {
+    width: 20%;
 }
 
 .page-identifier {
@@ -100,7 +107,7 @@ span {
 
 .movie {
     margin: 10px;
-    min-width: 55px;
+    /*min-width: 55px;*/
     display: inline-block;
 }
 
@@ -119,13 +126,14 @@ span {
 .year {
     clear: both;
     position: relative;
-    height: 150px;
+    min-height: 150px;
     /*display: inline-block;*/
 }
 
 .timeline {
+    clear: both;
     position: relative;
-    width: 75%;
+    width: 100%;
     text-align: center;
 }
 
@@ -138,7 +146,7 @@ span {
     left: 50%;
 }
 
-.vertical-details-bar {
+/*.vertical-details-bar {
     width: 1px;
     background-color: #bbb;
     height: 100%;
@@ -146,7 +154,7 @@ span {
     position: relative;
     top: 0;
     left: 50%;
-}
+}*/
 
 .year:nth-child(even) .shift-left {
     right: 50%;
@@ -171,8 +179,44 @@ span {
     top: 0;
 }
 
+@media only screen and (max-width: 1545px) and (min-width: 1000px) {
+
+    .year {
+        min-height: 105px;
+    }
+
+    .movie {
+        margin: 5px;
+    }
+
+    .movie img {
+        height: 95px;
+    }
+}
+
 @media only screen and (max-width: 999px) {
-  /* rules that only apply for canvases narrower than 1000px */
+    .shift-left, .shift-right {
+        position: static;
+    }
+
+    .year {
+        margin-top: 50px;
+    }
+
+    .vertical-bar {
+        display: none;
+    }
+
+    .movie-year {
+        display: block;
+        margin: auto;
+        font-size: 20px;
+        font-family: "Open Sans Condensed", sans-serif;
+    }
+
+    .timeline {
+        width: 100%;
+    }
 }
 
 @media only screen and (device-width: 768px) and (orientation: landscape) {
@@ -183,6 +227,4 @@ span {
     .movie-details {
             overflow: scroll;
     }
-
-
 }
