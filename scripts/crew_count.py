@@ -35,13 +35,12 @@ for row in doe_crew_csv:
 
     crew_dict[row[1]].add(row[2])
 
+# print len(names)
+# print len(jobs)
+
 for name in sorted(names, key=names.get, reverse=True):
     # print name, names[name], ", ".join(crew_dict[name])
     print name, len(movies[name]), ", ".join(movies[name]), ", ".join(crew_dict[name])
     # row = name, names[name], ", ".join(movies[name])
-    
-    # writer.writerow(row)
 
-# print len(names)
-# print len(jobs)
-    
+    # writer.writerow(row)

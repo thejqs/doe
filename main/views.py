@@ -86,13 +86,21 @@ def cast_and_crew(request):
 
     crew_csv = csv.reader(open('scripts/counted_crew.csv', 'r'))
 
+    crew_dict = {}
+
     for row in crew_csv:
         name = row[0]
         total_movies = row[1]
         jobs = row[2]
         movie_titles = row[3]
 
+        crew_dict[total_movies] = [
+            'name': name,
+            'titles': movie_titles,
+            'jobs': jobs
+        ]
 
+    context['movies'] = crew_dict
 
     context['image_repeat'] = range(0, 88)
 
