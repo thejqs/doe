@@ -44,15 +44,33 @@
                                                     {% endif %}
 
                                                     
-                                                      <h3><b>{{ context.title }}</b></h3>
+                                                      <h2><b>{{ context.title }}</b></h2>
 
                                                         <p class="year-released">{{ context.year_released }}</p>
+
+                                                                                                                <p>
+                                                        <p>
+                                                        {% if context.title == "All the President's Men" %}
+                                                        Won Oscar. 
+
+                                                        {% elif context.title == "Marooned" or "Butterflies Are Free" or "Bite the Bullet" or "The Electric Horseman" or "Altered States" or "Tootsie" %}
+                                                        Nominated for Oscar. 
+                                                            
+                                                        {% endif %}
+
+                                                        {% if context.title == "Cabaret" or "All the President's Men" %}
+                                                        Won BAFTA.
+                                                            
+                                                        {% endif %}
+
+                                                        </p>
                                                         <ul class="genres">
                                                             {% for genre in context.genres %}
                                                                 <li>{{ genre }}</li>
                                                             {% endfor %}
 
                                                         </ul>
+
                                                         
                                                 <p class="description">{{ context.description }}</p>
 

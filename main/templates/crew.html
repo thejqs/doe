@@ -9,15 +9,25 @@
                 <p><a class="page-id-link" href="http://www.americanradiohistory.com/Archive-Recording-Engineer/70s/Recording-1970-12.pdf" alt="Arthur Piantadosi interviewed in the November/December 1970 issue of 'RECORDING engineer/producer'" title="An interview with Arthur Piantadosi, 1970." target="_blank">crew</a></p>
         </div>
 
-<div class="camera-set">    
-    {% for i in image_repeat %}
+        <div class="crew-text">
+                <p>Arthur Piantadosi worked on each of the 88 movies this set represents. Often enough, his wasn't the only name to repeat from one to another. With some people he shared a credit list quite often. Others not so much. Here we can see some of those relationships for ourselves.</p>
+                {# <p><span class="small-film-icon fa fa-film"></span></p>     #}
+        </div>
 
-        <img class="camera-gray" src="{% static 'img/movie-camera-gray.png' %}" alt="A gray pictogram icon of a movie camera">
+        <div class="camera-set">    
+            {% for i in image_repeat %}
+
+                <img class="camera-gray" src="{% static 'img/movie-camera-gray.png' %}" alt="A gray pictogram icon of a movie camera">
         
-    {% endfor %}
+            {% endfor %}
 
-    </div>
-
+        </div>
+    <div class="arthur-choice">
+                <hr style="border-top: 1px dotted">
+                <p><a class="arthur-link" href="../main/">arthur</a> | <a class="arthur-link" href="../movies/">films</a>
+                 | cast</p>
+                <hr style="border-top: 1px dotted">
+                </div>
 
     {% include 'footer.html' %}
 {% endblock %}
