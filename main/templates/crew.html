@@ -1,12 +1,22 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
+{# {% load so_many_images %} #}
 
 
-{% block body %}
-    
+{% block content %}
+<div class="container">
+        <div class="page-identifier">
+                <p><a class="page-id-link" href="http://www.findagrave.com/cgi-bin/fg.cgi?page=gr&GSln=piantadosi&GSbyrel=all&GSdyrel=all&GSst=6&GScntry=4&GSob=n&GRid=119620804&df=all&" alt="Arthur Piantadosi's grave site at Valyermo." title="Arthur Piantadosi grave">crew</a></p>
+        </div>
 
+<div class="camera-set">    
+{% for i in image_repeat %}
 
+        <img class="camera-gray" src="{% static 'img/movie-camera-gray.png' %}" alt="A gray pictogram icon of a movie camera">
+        
+    {% endfor %}
 
+    </div>
 
 
     {% include 'footer.html' %}

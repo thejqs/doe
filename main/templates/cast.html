@@ -2,11 +2,20 @@
 {% load staticfiles %}
 
 
-{% block body %}
-    
+{% block content %}
+<div class="container">
+        <div class="page-identifier">
+                <p><a class="page-id-link" href="" alt="" title="">cast</p>
+        </div>
 
+<div class="camera-set">    
+{% for i in image_repeat %}
 
+        <img class="camera-gray" src="{% static 'img/movie-camera-gray.png' %}" alt="A gray pictogram icon of a movie camera">
+        
+    {% endfor %}
 
+    </div>
 
 
     {% include 'footer.html' %}
