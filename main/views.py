@@ -95,9 +95,9 @@ def cast_and_crew(request):
         movie_titles = row[3]
 
         crew_dict[total_movies] = [
-            'name': name,
-            'titles': movie_titles,
-            'jobs': jobs
+            name,
+            movie_titles,
+            jobs
         ]
 
     context['movies'] = crew_dict
