@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+    {% extends 'base.html' %}
 {% load staticfiles %}
 
 
@@ -53,12 +53,14 @@
                                                         {% if context.title == "All the President's Men" %}
                                                         Won Oscar. 
 
-                                                        {% elif context.title == "Marooned" or "Butterflies Are Free" or "Bite the Bullet" or "The Electric Horseman" or "Altered States" or "Tootsie" %}
-                                                        Nominated for Oscar. 
-                                                            
                                                         {% endif %}
 
-                                                        {% if context.title == "Cabaret" or "All the President's Men" %}
+                                                        {% if context.title == "Marooned" or context.title == "Butterflies Are Free" or context.title == "Bite the Bullet" or context.title == "The Electric Horseman" or context.title == "Altered States" or context.title == "Tootsie" %}
+                                                        Nominated for Oscar. 
+
+                                                        {% endif %}
+
+                                                        {% if context.title == "Cabaret" or context.title == "All the President's Men" %}
                                                         Won BAFTA.
                                                             
                                                         {% endif %}
