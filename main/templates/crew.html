@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
-{# {% load so_many_images %} #}
+{% load so_many_images %}
 
 
 {% block content %}
@@ -16,11 +16,13 @@
         </div>
 
         <div class="camera-set">    
-            {% for i in image_repeat %}
+            {% so_many_images '<img class="movie-camera" src="/static/img/movie-camera-gray.png">' 88 %}
 
-                <img class="camera-black" src="{% static 'img/movie-camera-black.png' %}" alt="A black pictogram icon of a movie camera">
+{#             {% for i in image_repeat %}
+
+                <img class="camera-gray" src="{% static 'img/movie-camera-gray.png' %}" alt="A pictogram icon of a movie camera">
         
-            {% endfor %}
+            {% endfor %} #}
 
         </div>
     <div class="arthur-choice">

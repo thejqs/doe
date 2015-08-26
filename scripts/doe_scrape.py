@@ -32,7 +32,6 @@ django.setup()
 from main.models import Arthur, Movie, CastMember, CrewMember
 
 
-
 class Scraper():
 
     # to ensure we have a valid url to read
@@ -160,7 +159,8 @@ class Scraper():
             cast_crew_href_xpath = '//*[@id="overview-top"]/div[6]/span[2]/a/@href'
         else:
             # cast_crew_href_xpath = '//*[@id="overview-top"]/div[3]/span[2]/a/@href'
-            print "This is a TV show. Ignore it."
+            # print "This is a TV show. Ignore it."
+            pass
 
         cast_crew_href = movie_tree.xpath(cast_crew_href_xpath)
 
@@ -194,7 +194,7 @@ class Scraper():
         for movie, href in movie_links.items():
             # this is the only TV show on this particular list.
             # resolved about half the issues with scraping it
-            # and will have to cme back to this.
+            # and will have to come back to this.
             if movie != "The Jack Benny Program":
 
                 cast_and_crew_url, movie_tree, movie_html = Scraper.find_coworkers(href)

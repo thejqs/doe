@@ -1,17 +1,11 @@
 import os, sys
-from django.shortcuts import render, render_to_response
-# from django.template import RequestContext
-# from django.http import HttpResponse
+from django.shortcuts import render
 # from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import View
 
 import csv
 from collections import OrderedDict
 import ast
-
-# import re
-
-# from django.views.generic.list import ListView
 
 sys.path.append("..")
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "project.settings")
@@ -93,6 +87,8 @@ def cast_and_crew(request):
         total_movies = row[1]
         jobs = row[2]
         movie_titles = row[3]
+
+        # crew_array.append()
 
         crew_dict[total_movies] = [
             name,

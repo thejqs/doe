@@ -76,6 +76,12 @@ class CastMember(models.Model):
         return self.name, self.movie_set.movie #, self.character
 
 
+class JobTitleOnMovie(models.Model):
+    crew_member = models.ForeignKey('CrewMember')
+    movie = models.ForeignKey('Movie')
+    job_title = models.CharField(max_length=200)
+
+
 class CrewMember(models.Model):
     name = models.CharField(max_length=120)
     # job_category = models.CharField(max_length=120)
