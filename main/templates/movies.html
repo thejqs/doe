@@ -24,7 +24,7 @@
                                           <div class="movie">
                                                 {% if context.poster %}
 
-                                                    <a class="revealmovie" href="#"><img src="{{ context.poster.url }}" alt="This is the poster for {{ context.title }}"></a>
+                                                    <a title="{{ context.title }}" data-title="show-title" class="revealmovie" href="#"><img src="{{ context.poster.url }}" alt="This is the poster for {{ context.title }}"></a>
 
                                                 {% else %}
 

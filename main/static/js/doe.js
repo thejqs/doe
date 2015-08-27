@@ -26,6 +26,10 @@ $('.backdrop').click(function(e) {
 });
 
 
+$(document).ready(function(){
+    $('[data-title="show-title"]').tooltip();
+});
+
 // $('.movie-camera').on({
 //     'click': function() {
 //         $('.movie-camera').attr('src', "/static/img/movie-camera-black.png" );
