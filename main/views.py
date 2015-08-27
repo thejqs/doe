@@ -90,8 +90,8 @@ def cast_and_crew(request):
 
         # crew_array.append()
 
-        crew_dict[total_movies] = [
-            name,
+        crew_dict[name] = [
+            total_movies,
             movie_titles,
             jobs
         ]

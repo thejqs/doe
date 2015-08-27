@@ -248,7 +248,17 @@ padding-right: 10px;*/
 }
 
 .camera-set img {
-    height: 50px;
+    height: 30px;
+    padding: 3px;
+}
+
+.coworkers {
+    text-decoration: none;
+    color: #808080;
+    font-family: "Open Sans Condensed", sans-serif;
+    margin: auto;
+    width: 65%;
+    display: block;
 }
 
 .footer {

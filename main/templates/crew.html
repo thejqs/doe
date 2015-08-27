@@ -1,7 +1,5 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
-{% load so_many_images %}
-
 
 {% block content %}
 <div class="container">
@@ -15,11 +13,28 @@
                 <p><span class="small-film-icon fa fa-film"></span></p>    
         </div>
 
-        <div class="camera-set">
-            {% so_many_images '<img class="movie-camera" src="/static/img/movie-camera-black.png">' 65 %}    
-            {% so_many_images '<img class="movie-camera" src="/static/img/movie-camera-gray.png">' 23 %}
 
-        </div>
+
+        <div class="camera-set" id="camera-set"></div>
+                                            <p>
+                <a id="fresholtz" class="coworkers" href="#"><h3>Les Fresholtz </h3></a>
+
+                <a id="wallin" class="coworkers" href="#"><h3>Dan Wallin </h3></a>
+
+                <a id="minkler" class="coworkers" href="#"><h3>Michael MInkler </h3></a>
+
+                <a id="lane" class="coworkers" href="#"><h3>Ben Lane </h3></a>
+
+                <a id="frankovich" class="coworkers" href="#"><h3>M.J. Frankovich </h3></a>
+
+                <a id="jones" class="coworkers" href="#"><h3>Virginia Jones </h3></a>
+
+                <a id="gaspar" class="coworkers" href="#"><h3>Chuck Gaspar </h3></a>
+
+                <a id="tyler" class="coworkers" href="#"><h3>Richard Tyler</h3></a>
+
+                </p>
+
     <div class="arthur-choice">
                 <hr style="border-top: 1px dotted">
                 <p><a class="arthur-link" href="../main/">arthur</a> | <a class="arthur-link" href="../movies/">films</a>
@@ -27,5 +42,7 @@
                 <hr style="border-top: 1px dotted">
                 </div>
 
+
     {% include 'footer.html' %}
+    <script src="{% static 'js/crew.js' %}"></script>
 {% endblock %}
