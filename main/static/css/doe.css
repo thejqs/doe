@@ -14,7 +14,7 @@ p {
 }
 
 ul {
-    padding-left: 0
+    padding-left: 0;
 }
 
 ul li {
@@ -106,6 +106,7 @@ ul li:before {
     color: #808080;
     font-family: "Open Sans Condensed", sans-serif;
     width: 30%;
+/*    font-size: 15px;*/
 }
 
 .arthur-link {
@@ -240,8 +241,6 @@ padding-right: 10px;*/
 #wrapper {
     width: 90%;
     margin: auto;
-    padding: auto;
-
 }
 
 .camera-set {
@@ -281,9 +280,8 @@ padding-right: 10px;*/
     margin-top: 30px;
     color: #808080;
     font-family: "Open Sans Condensed", sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 25px;
-
 }
 
 .coworker-of-note {
@@ -307,7 +305,6 @@ padding-right: 10px;*/
 .footer-link {
     text-decoration: none;
     color: #808080;
-
 }
 
 .footer-hr {
@@ -336,7 +333,7 @@ padding-right: 10px;*/
     }
 
     .page-identifier {
-    padding-bottom: 10px;
+        padding-bottom: 10px;
     }
 
     .year {
@@ -376,7 +373,6 @@ padding-right: 10px;*/
         display: block;
     }
 
-
     .camera-set {
         width: 35%;
     }
@@ -395,17 +391,33 @@ padding-right: 10px;*/
 
     #arthur hr {
         width: 80%;
-}
+    }
+
+    .arthur-choice {
+        width: 40%;
+        font-size: 15px;
+    }
 
     .camera-set {
-        text-align: left;
         display: block;
         padding: 5px;
-        width: 75%;
+        width: 65%;
     }
 
     .camera-set img {
-        height: 25px;
+        height: 15px;
+    }
+
+    .single-coworker {
+        font-size: 15px;
+    }
+
+    .of-note {
+        font-size: 15px;
+    }
+
+    .coworker-of-note {
+        font-size: 10px;
     }
 
     .footer-link {
@@ -415,5 +427,5 @@ padding-right: 10px;*/
     .footer-hr {
         width: 80%;
     }
-
+    
 }
