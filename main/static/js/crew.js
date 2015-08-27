@@ -45,8 +45,8 @@ var reset = function() {
 }
 
 // Top eight:
-var fresholtzBtn = document.getElementById("fresholtz");
-fresholtzBtn.addEventListener('click', function(e) {
+var colleagueBtn = document.getElementById("fresholtz");
+colleagueBtn.addEventListener('click', function(e) {
     e.preventDefault();
 
     if (highlighted) {
@@ -62,8 +62,8 @@ fresholtzBtn.addEventListener('click', function(e) {
 });
 
 
-var wallinBtn = document.getElementById("wallin");
-wallinBtn.addEventListener('click', function(e) {
+var colleagueBtn = document.getElementById("wallin");
+colleagueBtn.addEventListener('click', function(e) {
     e.preventDefault();
 
     if (highlighted) {
@@ -79,8 +79,8 @@ wallinBtn.addEventListener('click', function(e) {
 });
 
 
-var minklerBtn = document.getElementById("minkler");
-minklerBtn.addEventListener('click', function(e) {
+var colleagueBtn = document.getElementById("minkler");
+colleagueBtn.addEventListener('click', function(e) {
     e.preventDefault();
 
     if (highlighted) {
@@ -96,8 +96,8 @@ minklerBtn.addEventListener('click', function(e) {
 });
 
 
-var laneBtn = document.getElementById("lane");
-laneBtn.addEventListener('click', function(e) {
+var colleagueBtn = document.getElementById("lane");
+colleagueBtn.addEventListener('click', function(e) {
     e.preventDefault();
 
     if (highlighted) {
@@ -113,8 +113,8 @@ laneBtn.addEventListener('click', function(e) {
 });
 
 
-var frankovichBtn = document.getElementById("frankovich");
-frankovichBtn.addEventListener('click', function(e) {
+var colleagueBtn = document.getElementById("frankovich");
+colleagueBtn.addEventListener('click', function(e) {
     e.preventDefault();
 
     if (highlighted) {
@@ -130,8 +130,8 @@ frankovichBtn.addEventListener('click', function(e) {
 });
 
 
-var jonesBtn = document.getElementById("jones");
-jonesBtn.addEventListener('click', function(e) {
+var colleagueBtn = document.getElementById("jones");
+colleagueBtn.addEventListener('click', function(e) {
     e.preventDefault();
 
     if (highlighted) {
@@ -147,8 +147,8 @@ jonesBtn.addEventListener('click', function(e) {
 });
 
 
-var gasparBtn = document.getElementById("gaspar");
-gasparBtn.addEventListener('click', function(e) {
+var colleagueBtn = document.getElementById("gaspar");
+colleagueBtn.addEventListener('click', function(e) {
     e.preventDefault();
 
     if (highlighted) {
@@ -164,8 +164,8 @@ gasparBtn.addEventListener('click', function(e) {
 });
 
 
-var tylerBtn = document.getElementById("tyler");
-tylerBtn.addEventListener('click', function(e) {
+var colleagueBtn = document.getElementById("tyler");
+colleagueBtn.addEventListener('click', function(e) {
     e.preventDefault();
 
     if (highlighted) {
@@ -182,8 +182,8 @@ tylerBtn.addEventListener('click', function(e) {
 
 
 // Others of note:
-var pollackBtn = document.getElementById("pollack");
-pollackBtn.addEventListener('click', function(e) {
+var colleagueBtn = document.getElementById("pollack");
+colleagueBtn.addEventListener('click', function(e) {
     e.preventDefault();
 
     if (highlighted) {
@@ -199,8 +199,8 @@ pollackBtn.addEventListener('click', function(e) {
 });
 
 
-var grusinBtn = document.getElementById("grusin");
-grusinBtn.addEventListener('click', function(e) {
+var colleagueBtn = document.getElementById("grusin");
+colleagueBtn.addEventListener('click', function(e) {
     e.preventDefault();
 
     if (highlighted) {
@@ -216,8 +216,8 @@ grusinBtn.addEventListener('click', function(e) {
 });
 
 
-var brooksBtn = document.getElementById("brooks");
-brooksBtn.addEventListener('click', function(e) {
+var colleagueBtn = document.getElementById("brooks");
+colleagueBtn.addEventListener('click', function(e) {
     e.preventDefault();
 
     if (highlighted) {
@@ -233,8 +233,8 @@ brooksBtn.addEventListener('click', function(e) {
 });
 
 
-var qjonesBtn = document.getElementById("qjones");
-qjonesBtn.addEventListener('click', function(e) {
+var colleagueBtn = document.getElementById("qjones");
+colleagueBtn.addEventListener('click', function(e) {
     e.preventDefault();
 
     if (highlighted) {
