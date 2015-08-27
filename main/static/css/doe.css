@@ -237,14 +237,20 @@ padding-right: 10px;*/
 
 }
 
+#wrapper {
+    width: 90%;
+    margin: auto;
+    padding: auto;
+
+}
+
 .camera-set {
     border-top: 2px dotted black;
     border-right: 2px dotted black;
-    display: block;
-    margin-left: 15%;
+    display: inline-block;
     padding-top: 10px;
     padding-right: 10px;
-    width: 30%;
+    width: 40%;
 }
 
 .camera-set img {
@@ -252,13 +258,40 @@ padding-right: 10px;*/
     padding: 3px;
 }
 
-.coworkers {
+.coworkers {    
+    width: 15%;
+    height: 150px;
+    display: inline-block;
+    margin-left: 15%;
+    margin-right: 2%;
+}
+
+.single-coworker {
     text-decoration: none;
     color: #808080;
     font-family: "Open Sans Condensed", sans-serif;
+    font-size: 25px;
+}
+
+.of-note {
+    width: 75%;
     margin: auto;
-    width: 65%;
     display: block;
+    text-align: center;
+    margin-top: 30px;
+    color: #808080;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 25px;
+    line-height: 25px;
+
+}
+
+.coworker-of-note {
+    text-decoration: none;
+    color: #808080;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 15px;
+    line-height: 25px;
 }
 
 .footer {
