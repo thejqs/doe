@@ -17,20 +17,20 @@ for (var x = 1; x <= 88; x++) {
 // all out AND I WILL FIND IT. AT SOME POINT. 
 // CLEARLY NOT TONIGHT.
 
-var fresholtz = 46
-var wallin = 30
-var minkler = 23
-var lane = 12
-var frankovich = 12
-var jones = 12
-var gaspar = 11
-var tyler = 11
-var pollack = 6
-var grusin = 8
-var brooks = 2
-var qjones = 6
-var bernstein = 6
-var morricone = 1
+// var fresholtz = 46
+// var wallin = 30
+// var minkler = 23
+// var lane = 12
+// var frankovich = 12
+// var jones = 12
+// var gaspar = 11
+// var tyler = 11
+// var pollack = 6
+// var grusin = 8
+// var brooks = 2
+// var qjones = 6
+// var bernstein = 6
+// var morricone = 1
 
 var highlighted = false
 
@@ -44,209 +44,234 @@ var reset = function() {
     
 }
 
+
+var workerLinks = document.getElementsByClassName("single-coworker")
+// debugger
+for(var i = 0; i < workerLinks.length; i++) {
+    workerLinks[i].addEventListener('click', function(e) {
+        e.preventDefault();
+        // debugger
+        if (highlighted) {
+            reset();
+            return;
+        }
+
+        highlighted = true;
+        var number = this.getAttribute("data-number");
+        for(var x = 1; x <= number; x++) {
+          var img = document.getElementById("movie" + x);
+          img.src = "/static/img/movie-camera-black.png"
+        }
+    })
+};
+
+
+
+
+
 // Top eight:
-var colleagueBtn = document.getElementById("fresholtz");
-colleagueBtn.addEventListener('click', function(e) {
-    e.preventDefault();
+// var colleagueBtn = document.getElementById("fresholtz");
+// colleagueBtn.addEventListener('click', function(e) {
+//     e.preventDefault();
 
-    if (highlighted) {
-        reset();
-        return;
-    }
+//     if (highlighted) {
+//         reset();
+//         return;
+//     }
 
-    highlighted = true;
-    for ( var x = 1; x <= fresholtz; x++) {
-    var img = document.getElementById("movie" + x);
-    img.src = "/static/img/movie-camera-black.png"
-    }
-});
-
-
-var colleagueBtn = document.getElementById("wallin");
-colleagueBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-
-    if (highlighted) {
-        reset();
-        return;
-    }
-
-    highlighted = true;
-    for ( var x = 1; x <= wallin; x++) {
-    var img = document.getElementById("movie" + x);
-    img.src = "/static/img/movie-camera-black.png"
-    }
-});
+//     highlighted = true;
+//     for ( var x = 1; x <= fresholtz; x++) {
+//     var img = document.getElementById("movie" + x);
+//     img.src = "/static/img/movie-camera-black.png"
+//     }
+// });
 
 
-var colleagueBtn = document.getElementById("minkler");
-colleagueBtn.addEventListener('click', function(e) {
-    e.preventDefault();
+// var colleagueBtn = document.getElementById("wallin");
+// colleagueBtn.addEventListener('click', function(e) {
+//     e.preventDefault();
 
-    if (highlighted) {
-        reset();
-        return;
-    }
+//     if (highlighted) {
+//         reset();
+//         return;
+//     }
 
-    highlighted = true;
-    for ( var x = 1; x <= minkler; x++) {
-    var img = document.getElementById("movie" + x);
-    img.src = "/static/img/movie-camera-black.png"
-    }
-});
-
-
-var colleagueBtn = document.getElementById("lane");
-colleagueBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-
-    if (highlighted) {
-        reset();
-        return;
-    }
-
-    highlighted = true;
-    for ( var x = 1; x <= lane; x++) {
-    var img = document.getElementById("movie" + x);
-    img.src = "/static/img/movie-camera-black.png"
-    }
-});
+//     highlighted = true;
+//     for ( var x = 1; x <= wallin; x++) {
+//     var img = document.getElementById("movie" + x);
+//     img.src = "/static/img/movie-camera-black.png"
+//     }
+// });
 
 
-var colleagueBtn = document.getElementById("frankovich");
-colleagueBtn.addEventListener('click', function(e) {
-    e.preventDefault();
+// var colleagueBtn = document.getElementById("minkler");
+// colleagueBtn.addEventListener('click', function(e) {
+//     e.preventDefault();
 
-    if (highlighted) {
-        reset();
-        return;
-    }
+//     if (highlighted) {
+//         reset();
+//         return;
+//     }
 
-    highlighted = true;
-    for ( var x = 1; x <= frankovich; x++) {
-    var img = document.getElementById("movie" + x);
-    img.src = "/static/img/movie-camera-black.png"
-    }
-});
-
-
-var colleagueBtn = document.getElementById("jones");
-colleagueBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-
-    if (highlighted) {
-        reset();
-        return;
-    }
-
-    highlighted = true;
-    for ( var x = 1; x <= jones; x++) {
-    var img = document.getElementById("movie" + x);
-    img.src = "/static/img/movie-camera-black.png"
-    }
-});
+//     highlighted = true;
+//     for ( var x = 1; x <= minkler; x++) {
+//     var img = document.getElementById("movie" + x);
+//     img.src = "/static/img/movie-camera-black.png"
+//     }
+// });
 
 
-var colleagueBtn = document.getElementById("gaspar");
-colleagueBtn.addEventListener('click', function(e) {
-    e.preventDefault();
+// var colleagueBtn = document.getElementById("lane");
+// colleagueBtn.addEventListener('click', function(e) {
+//     e.preventDefault();
 
-    if (highlighted) {
-        reset();
-        return;
-    }
+//     if (highlighted) {
+//         reset();
+//         return;
+//     }
 
-    highlighted = true;
-    for ( var x = 1; x <= gaspar; x++) {
-    var img = document.getElementById("movie" + x);
-    img.src = "/static/img/movie-camera-black.png"
-    }
-});
-
-
-var colleagueBtn = document.getElementById("tyler");
-colleagueBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-
-    if (highlighted) {
-        reset();
-        return;
-    }
-
-    highlighted = true;
-    for ( var x = 1; x <= tyler; x++) {
-    var img = document.getElementById("movie" + x);
-    img.src = "/static/img/movie-camera-black.png"
-    }
-});
+//     highlighted = true;
+//     for ( var x = 1; x <= lane; x++) {
+//     var img = document.getElementById("movie" + x);
+//     img.src = "/static/img/movie-camera-black.png"
+//     }
+// });
 
 
-// Others of note:
-var colleagueBtn = document.getElementById("pollack");
-colleagueBtn.addEventListener('click', function(e) {
-    e.preventDefault();
+// var colleagueBtn = document.getElementById("frankovich");
+// colleagueBtn.addEventListener('click', function(e) {
+//     e.preventDefault();
 
-    if (highlighted) {
-        reset();
-        return;
-    }
+//     if (highlighted) {
+//         reset();
+//         return;
+//     }
 
-    highlighted = true;
-    for ( var x = 1; x <= pollack; x++) {
-    var img = document.getElementById("movie" + x);
-    img.src = "/static/img/movie-camera-black.png"
-    }
-});
-
-
-var colleagueBtn = document.getElementById("grusin");
-colleagueBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-
-    if (highlighted) {
-        reset();
-        return;
-    }
-
-    highlighted = true;
-    for ( var x = 1; x <= grusin; x++) {
-    var img = document.getElementById("movie" + x);
-    img.src = "/static/img/movie-camera-black.png"
-    }
-});
+//     highlighted = true;
+//     for ( var x = 1; x <= frankovich; x++) {
+//     var img = document.getElementById("movie" + x);
+//     img.src = "/static/img/movie-camera-black.png"
+//     }
+// });
 
 
-var colleagueBtn = document.getElementById("brooks");
-colleagueBtn.addEventListener('click', function(e) {
-    e.preventDefault();
+// var colleagueBtn = document.getElementById("jones");
+// colleagueBtn.addEventListener('click', function(e) {
+//     e.preventDefault();
 
-    if (highlighted) {
-        reset();
-        return;
-    }
+//     if (highlighted) {
+//         reset();
+//         return;
+//     }
 
-    highlighted = true;
-    for ( var x = 1; x <= brooks; x++) {
-    var img = document.getElementById("movie" + x);
-    img.src = "/static/img/movie-camera-black.png"
-    }
-});
+//     highlighted = true;
+//     for ( var x = 1; x <= jones; x++) {
+//     var img = document.getElementById("movie" + x);
+//     img.src = "/static/img/movie-camera-black.png"
+//     }
+// });
 
 
-var colleagueBtn = document.getElementById("qjones");
-colleagueBtn.addEventListener('click', function(e) {
-    e.preventDefault();
+// var colleagueBtn = document.getElementById("gaspar");
+// colleagueBtn.addEventListener('click', function(e) {
+//     e.preventDefault();
 
-    if (highlighted) {
-        reset();
-        return;
-    }
+//     if (highlighted) {
+//         reset();
+//         return;
+//     }
 
-    highlighted = true;
-    for ( var x = 1; x <= qjones; x++) {
-    var img = document.getElementById("movie" + x);
-    img.src = "/static/img/movie-camera-black.png"
-    }
-});
+//     highlighted = true;
+//     for ( var x = 1; x <= gaspar; x++) {
+//     var img = document.getElementById("movie" + x);
+//     img.src = "/static/img/movie-camera-black.png"
+//     }
+// });
+
+
+// var colleagueBtn = document.getElementById("tyler");
+// colleagueBtn.addEventListener('click', function(e) {
+//     e.preventDefault();
+
+//     if (highlighted) {
+//         reset();
+//         return;
+//     }
+
+//     highlighted = true;
+//     for ( var x = 1; x <= tyler; x++) {
+//     var img = document.getElementById("movie" + x);
+//     img.src = "/static/img/movie-camera-black.png"
+//     }
+// });
+
+
+// // Others of note:
+// var colleagueBtn = document.getElementById("pollack");
+// colleagueBtn.addEventListener('click', function(e) {
+//     e.preventDefault();
+
+//     if (highlighted) {
+//         reset();
+//         return;
+//     }
+
+//     highlighted = true;
+//     for ( var x = 1; x <= pollack; x++) {
+//     var img = document.getElementById("movie" + x);
+//     img.src = "/static/img/movie-camera-black.png"
+//     }
+// });
+
+
+// var colleagueBtn = document.getElementById("grusin");
+// colleagueBtn.addEventListener('click', function(e) {
+//     e.preventDefault();
+
+//     if (highlighted) {
+//         reset();
+//         return;
+//     }
+
+//     highlighted = true;
+//     for ( var x = 1; x <= grusin; x++) {
+//     var img = document.getElementById("movie" + x);
+//     img.src = "/static/img/movie-camera-black.png"
+//     }
+// });
+
+
+// var colleagueBtn = document.getElementById("brooks");
+// colleagueBtn.addEventListener('click', function(e) {
+//     e.preventDefault();
+
+//     if (highlighted) {
+//         reset();
+//         return;
+//     }
+
+//     highlighted = true;
+//     for ( var x = 1; x <= brooks; x++) {
+//     var img = document.getElementById("movie" + x);
+//     img.src = "/static/img/movie-camera-black.png"
+//     }
+// });
+
+
+// var colleagueBtn = document.getElementById("qjones");
+// colleagueBtn.addEventListener('click', function(e) {
+//     e.preventDefault();
+
+//     if (highlighted) {
+//         reset();
+//         return;
+//     }
+
+//     highlighted = true;
+//     for ( var x = 1; x <= qjones; x++) {
+//     var img = document.getElementById("movie" + x);
+//     img.src = "/static/img/movie-camera-black.png"
+//     }
+// });
 
     
