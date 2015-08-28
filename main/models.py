@@ -1,4 +1,6 @@
 from django.db import models
+from django.db.models.signals import post_delete
+from django.dispatch import receiver
 
 
 class Arthur(models.Model):
@@ -58,6 +60,13 @@ class Movie(models.Model):
         return self.title #, '%s' % str(self.year_released)
 
 
+@receiver(post_delete, sender=Movie)
+def movie_post_delete_handler(sender, **kwargs):
+    movie = kwargs['instance']
+    storage, path = movie.poster.storage, movie.poster.path
+    storage.delete(path)
+
+
 class CastMember(models.Model):
     name = models.CharField(max_length=120)
     # character = models.CharField(max_length=120, null=True, blank=True)
@@ -76,10 +85,10 @@ class CastMember(models.Model):
         return self.name, self.movie_set.movie #, self.character
 
 
-class JobTitleOnMovie(models.Model):
-    crew_member = models.ForeignKey('CrewMember')
-    movie = models.ForeignKey('Movie')
-    job_title = models.CharField(max_length=200)
+# class JobTitleOnMovie(models.Model):
+#     crew_member = models.ForeignKey('CrewMember')
+#     movie = models.ForeignKey('Movie')
+#     job_title = models.CharField(max_length=200)
 
 
 class CrewMember(models.Model):
