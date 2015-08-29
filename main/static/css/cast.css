@@ -49,12 +49,7 @@
 @media only screen and (max-width: 1545px) and (min-width: 1000px) {
 
     .camera-set-cast {
-        border: 2px dotted black;
-        display: block;
-        padding-top: 10px;
-        padding-right: 10px;
-        width: 75%;
-        margin: auto;
+        width: 65%;
     }
 
     .camera-set-cast img {
