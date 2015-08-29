@@ -18,32 +18,25 @@
         {# <div id="wrapper"> #}
         <div class="crew-coworkers">
                                                         
-                <p><a data-number="46" class="crew" href="#">Les Fresholtz </a></p>
+                <p><a data-number="46" class="crew-name" href="#">Les Fresholtz </a></p>
 
-                <p><a data-number="30" class="crew" href="#">Dan Wallin </a></p>
+                <p><a data-number="30" class="crew-name" href="#">Dan Wallin </a></p>
+  
+                <p><a data-number="23" class="crew-name" href="#">Michael Minkler </a></p>
+  
+                <p><a data-number="12" class="crew-name" href="#">Ben Lane </a></p>
+  
+                <p><a data-number="12" class="crew-name" href="#">M.J. Frankovich </a></p>
+  
+                <p><a data-number="12" class="crew-name" href="#">Virginia Jones </a></p></p>
+  
+                <p><a data-number="11" class="crew-name" href="#">Chuck Gaspar </a></p>
 
-                <p><a data-number="23" class="crew" href="#">Michael Minkler </a></p>
-
-                <p><a data-number="12" class="crew" href="#">Ben Lane </a></p>
-
-                <p><a data-number="12" class="crew" href="#">M.J. Frankovich </a></p>
-
-                <p><a data-number="12" class="crew" href="#">Virginia Jones </a></p></p>
-
-                <p><a data-number="11" class="crew" href="#">Chuck Gaspar </a></p>
-
-                <p><a data-number="11" class="crew" href="#">Richard Tyler</a></p>
+                <p><a data-number="11" class="crew-name" href="#">Richard Tyler</a></p>
 
         </div>
-        <div class="camera-set" id="camera-set">
-            <div class="coworker-detail">
-                {% for name, crew in crew_members %}
-                    
-                <h2>{{ crew.total_movies }}</h2>
+        <div class="camera-set" id="camera-set"></div>
 
-                {% endfor %}
-            </div>
-        </div>
         <div class="of-note">
             <p>Others of note: <a data-number="6" class="coworker-of-note" href="#">Sidney Pollack </a><a data-number="8" class="coworker-of-note" href="#"> Dave Grusin </a><a data-number="2" class="coworker-of-note" href="#"> Mel Brooks </a><a data-number="6" class="coworker-of-note" href="#"> Quincy Jones</a></p>
         </div>
@@ -57,6 +50,5 @@
                 </div>
 
 
-    {% include 'footer.html' %}
-    <script src="{% static 'js/crew.js' %}"></script>
+{% include 'footer.html' %}
 {% endblock %}
