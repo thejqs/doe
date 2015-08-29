@@ -1,13 +1,14 @@
 
 $('.revealmovie').click(function(e) {
     e.preventDefault();
-    $('.movie-details').fadeOut()
+    $('.movie-details').fadeOut('fast')
     if ($(this).next().is(":visible")) {
-        $(this).next().fadeOut()
+        $(this).next().fadeOut('fast')
     } else {
-        $(this).next().fadeIn()
+        $(this).next().fadeIn('fast')
     }
 });
+
 
 $('.backdrop').click(function(e) {
     $('.movie-details').fadeOut()
@@ -18,5 +19,3 @@ $('.backdrop').click(function(e) {
 $(document).ready(function(){
     $('[data-title="show-title"]').tooltip
 });
-
-

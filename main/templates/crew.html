@@ -10,41 +10,49 @@
         <div class="crew-text">
                 <p>Arthur Piantadosi worked on each of the 88 movies this set represents. Often enough, his wasn't the only name to repeat from one to another. With some people he shared a credit list quite often. Others not so much.</p> 
                 <p>Here we can see some of those relationships for ourselves.</p>
-                <p>These are the eight crew members who worked most often with him. For each time they worked together, one in the set will highlight.</p>
+                <p>These are the eight crew members with whom he worked most often. For each time they worked together, one in the set will highlight.</p>
                 <p><span class="small-film-icon fa fa-film"></span></p>    
         </div>
 
 
-        <div id-"wrapper">
-        <div class="coworkers">
+        {# <div id="wrapper"> #}
+        <div class="crew-coworkers">
                                                         
-                <p><a id="fresholtz" data-number="46" class="single-coworker" href="#">Les Fresholtz </a></p>
+                <p><a data-number="46" class="crew" href="#">Les Fresholtz </a></p>
 
-                <p><a id="wallin" data-number="30" class="single-coworker" href="#">Dan Wallin </a></p>
+                <p><a data-number="30" class="crew" href="#">Dan Wallin </a></p>
 
-                <p><a id="minkler" data-number="23" class="single-coworker" href="#">Michael Minkler </a></p>
+                <p><a data-number="23" class="crew" href="#">Michael Minkler </a></p>
 
-                <p><a id="lane" data-number="12" class="single-coworker" href="#">Ben Lane </a></p>
+                <p><a data-number="12" class="crew" href="#">Ben Lane </a></p>
 
-                <p><a id="frankovich" data-number="12" class="single-coworker" href="#">M.J. Frankovich </a></p>
+                <p><a data-number="12" class="crew" href="#">M.J. Frankovich </a></p>
 
-                <p><a id="jones" data-number="12" class="single-coworker" href="#">Virginia Jones </a></p></p>
+                <p><a data-number="12" class="crew" href="#">Virginia Jones </a></p></p>
 
-                <p><a id="gaspar" data-number="11" class="single-coworker" href="#">Chuck Gaspar </a></p>
+                <p><a data-number="11" class="crew" href="#">Chuck Gaspar </a></p>
 
-                <p><a id="tyler" data-number="11" class="single-coworker" href="#">Richard Tyler</a></p>
+                <p><a data-number="11" class="crew" href="#">Richard Tyler</a></p>
 
         </div>
-        <div class="camera-set" id="camera-set"></div>
+        <div class="camera-set" id="camera-set">
+            <div class="coworker-detail">
+                {% for name, crew in crew_members %}
+                    
+                <h2>{{ crew.total_movies }}</h2>
+
+                {% endfor %}
+            </div>
+        </div>
         <div class="of-note">
-            <p>Others of note: <a id="pollack" class="coworker-of-note" href="#">Sidney Pollack </a><a id="grusin" class="coworker-of-note" href="#">Dave Grusin </a><a id="brooks" class="coworker-of-note" href="#">Mel Brooks </a><a id="qjones" class="coworker-of-note" href="#">Quincy Jones </a></p>
+            <p>Others of note: <a data-number="6" class="coworker-of-note" href="#">Sidney Pollack </a><a data-number="8" class="coworker-of-note" href="#"> Dave Grusin </a><a data-number="2" class="coworker-of-note" href="#"> Mel Brooks </a><a data-number="6" class="coworker-of-note" href="#"> Quincy Jones</a></p>
         </div>
         </div>
 
     <div class="arthur-choice">
                 <hr style="border-top: 1px dotted">
-                <p><a class="arthur-link" href="../main/">arthur</a> | <a class="arthur-link" href="../movies/">films</a>
-                 | cast</p>
+                <p><a class="arthur-link" href="/arthur/">arthur</a> | <a class="arthur-link" href="/movies/">films</a>
+                 | <a class="arthur-link" href="/cast/">cast</a></p>
                 <hr style="border-top: 1px dotted">
                 </div>
 

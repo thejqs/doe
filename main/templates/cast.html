@@ -5,18 +5,59 @@
 {% block content %}
 <div class="container">
         <div class="page-identifier">
-                <p><a class="page-id-link" href="http://awards.bafta.org/award/1973/film/soundtrack" alt="Arthur Piantadosi and colleagues, winner of the BAFTA for 'Cabaret', 1973." title="BAFTA winners for 'Cabaret'">cast</p>
+                <p><a class="page-id-link" href="http://awards.bafta.org/award/1973/film/soundtrack" alt="Arthur Piantadosi and colleagues, winner of the BAFTA for 'Cabaret', 1973." title="BAFTA winners for 'Cabaret'" target="_blank">cast</a></p>
         </div>
 
-<div class="camera-set">    
-{% for i in image_repeat %}
+<div id="camera-set" class="camera-set-cast"></div>
 
-        <img class="camera-gray" src="{% static 'img/movie-camera-gray.png' %}" alt="A gray pictogram icon of a movie camera">
-        
-    {% endfor %}
+            <div class="cast-coworkers">
+                                                        
+                <p><a data-number="7" class="cast" href="#"> Dick Winslow </a><span class="small-film-icon fa fa-film"></span> 
+ 
+                <a data-number="6" class="cast" href="#"> George Gaines </a><span class="small-film-icon fa fa-film"></span> 
+ 
+                <a data-number="5" class="cast" href="#"> Gene Hackman </a><span class="small-film-icon fa fa-film"></span> 
+ 
+                <a data-number="5" class="cast" href="#"> Charles Durning </a><span class="small-film-icon fa fa-film"></span> 
+ 
+                <a data-number="5" class="cast" href="#"> Duke Hobbe </a><span class="small-film-icon fa fa-film"></span> 
+ 
+                <a data-number="5" class="cast" href="#"> Paul Mazursky </a><span class="small-film-icon fa fa-film"></span> 
+ 
+                <a data-number="4" class="cast" href="#"> Elliot Gould </a><span class="small-film-icon fa fa-film"></span> 
+ 
+                <a data-number="4" class="cast" href="#"> Jeffrey Sayre </a><span class="small-film-icon fa fa-film"></span> 
+ 
+                <a data-number="4" class="cast" href="#"> George DeNormand </a><span class="small-film-icon fa fa-film"></span> 
+ 
+                <a data-number="4" class="cast" href="#"> Tom Stewart </a><span class="small-film-icon fa fa-film"></span> 
+ 
+                <a data-number="4" class="cast" href="#"> Scott Bradley </a><span class="small-film-icon fa fa-film"></span> 
+ 
+                <a data-number="4" class="cast" href="#"> Vincent Van Lynn </a><span class="small-film-icon fa fa-film"></span> 
+ 
+                <a data-number="4" class="cast" href="#"> Frank Matthias </a><span class="small-film-icon fa fa-film"></span>
+ 
+                <a data-number="4" class="cast" href="#"> Linda Burton </a><span class="small-film-icon fa fa-film"></span> 
+ 
+                <a data-number="4" class="cast" href="#"> Dyan Cannon </a><span class="small-film-icon fa fa-film"></span> 
+ 
+                <a data-number="4" class="cast" href="#"> Kenner G. Kemp </a><span class="small-film-icon fa fa-film"></span> 
+ 
+                <a data-number="4" class="cast" href="#"> John Furlong </a><span class="small-film-icon fa fa-film"></span> 
+ 
+                <a data-number="4" class="cast" href="#"> Isabel Sanford </a><span class="small-film-icon fa fa-film"></span>
 
-    </div>
+        </div>
+
+    <div class="arthur-choice">
+                <hr style="border-top: 1px dotted">
+                <p><a class="arthur-link" href="/arthur/">arthur</a> | <a class="arthur-link" href="/movies/">films</a>
+                 | <a class="arthur-link" href="/crew/"></a>crew</p>
+                <hr style="border-top: 1px dotted">
+                </div>
 
 
     {% include 'footer.html' %}
+        <script src="{% static 'js/crew.js' %}"></script>
 {% endblock %}

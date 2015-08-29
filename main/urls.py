@@ -4,8 +4,9 @@ admin.autodiscover()
 
 
 urlpatterns = [
-    url(r'^main/$', 'main.views.arthur', name='arthur'),
+    url(r'^arthur/$', 'main.views.arthur', name='arthur'),
     url(r'^movies/$', 'main.views.movies', name='movies'),
-    url(r'^crew/$', 'main.views.cast_and_crew', name='crew'),
-    url(r'cast/$', 'main.views.cast_and_crew', name='cast'),
+    url(r'^crew/$', 'main.views.crew', name='crew'),
+    url(r'^cast/$', 'main.views.cast', name='cast'),
+    url(r'^experiment/$', 'main.views.experiment', name='experiment')
 ]

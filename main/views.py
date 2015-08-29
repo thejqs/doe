@@ -75,7 +75,7 @@ def movies(request):
     return render(request, 'movies.html', context)
 
 
-def cast_and_crew(request):
+def crew(request):
     context = {}
 
     crew_csv = csv.reader(open('scripts/counted_crew.csv', 'r'))
@@ -96,8 +96,34 @@ def cast_and_crew(request):
             jobs
         ]
 
-    context['movies'] = crew_dict
-
-    context['image_repeat'] = range(0, 88)
+    context['crew_members'] = crew_dict
 
     return render(request, 'crew.html', context)
+
+
+def cast(request):
+    context = {}
+
+    cast_csv = csv.reader(open('scripts/counted_cast.csv', 'r'))
+
+    cast_dict = {}
+
+    for row in cast_csv:
+        name = row[0]
+        total_movies = row[1]
+        movie_titles = row[2]
+
+        # crew_array.append()
+
+        cast_dict[name] = [
+            total_movies,
+            movie_titles,
+        ]
+
+    context['crew_members'] = cast_dict
+
+    return render(request, 'cast.html', context)
+
+
+def experiment(request):
+    return render(request, 'experiment.html')
