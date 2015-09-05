@@ -4,7 +4,7 @@ for (var x = 1; x <= 88; x++) {
 
     var img = document.createElement('IMG');
     img.id = "movie" + x
-    img.src = "/static/img/movie-camera-gray.png";
+    img.src = "/static/img/movie-camera-off-white.png";
     cameraSet.appendChild(img);
 }
 
@@ -15,20 +15,30 @@ var highlighted = false
 var reset = function() {
     for (var x = 1; x <= 88; x++) {
         var img = document.getElementById("movie" + x);
-        img.src = "/static/img/movie-camera-gray.png";
+        img.src = "/static/img/movie-camera-off-white.png";
     }
 
     highlighted = false;
     
 }
 
+var currentID = ""
 
 var workerLinks = document.getElementsByClassName("crew-name")
 // debugger
 for(var i = 0; i < workerLinks.length; i++) {
     workerLinks[i].addEventListener('click', function(e) {
         e.preventDefault();
+        // console.log(this.id)
         // debugger
+
+        if(currentID != '' && currentID != this.id) {
+            document.getElementById(currentID).className = 'crew-name'
+            reset()
+        }
+
+        currentID = this.id
+
         if (highlighted) {
             this.className = 'crew-name'
             reset();
@@ -46,11 +56,20 @@ for(var i = 0; i < workerLinks.length; i++) {
 };
 
 
+
 var workerLinks = document.getElementsByClassName("cast-name")
 
 for(var i = 0; i < workerLinks.length; i++) {
     workerLinks[i].addEventListener('click', function(e) {
         e.preventDefault();
+
+        if(currentID != '' && currentID != this.id) {
+            document.getElementById(currentID).className = 'cast-name'
+            reset()
+        }
+
+        currentID = this.id
+
 
         if (highlighted) {
             this.className = 'cast-name'
@@ -74,6 +93,14 @@ for(var i = 0; i < workerLinks.length; i++) {
     workerLinks[i].addEventListener('click', function(e) {
         e.preventDefault();
         // debugger
+
+        if(currentID != '' && currentID != this.id) {
+            document.getElementById(currentID).className = 'coworker-of-note'
+            reset()
+        }
+
+        currentID = this.id
+
         if (highlighted) {
             this.className = 'coworker-of-note'
             reset();

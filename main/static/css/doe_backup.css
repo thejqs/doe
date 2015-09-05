@@ -1,5 +1,5 @@
 body {
-    background-color: #9ABCDE;
+    background-color: black;
 }
 
 h1 {
@@ -72,18 +72,18 @@ ul li:before {
     padding-bottom: 30px;
     text-align: center;
     margin: auto;
-    color: #808080;
+    color: #CD5C5C;
     font-family: "Open Sans Condensed", sans-serif;
     width: 30%;
 }
 
 .arthur-link {
     text-decoration: none;
-    color: #808080;
+    color: #FFEBCD;
 }
 
 #arthur {
-    color: #808080;
+    color: #CD5C5C;
     text-align: center;
     padding-top: 75px;
     font-family: "Montserrat", sans-serif;
@@ -91,16 +91,17 @@ ul li:before {
 }
 
 #arthur hr {
+    color: #CD5C5C;
     width: 20%;
 }
 
 .page-id-link {
     text-decoration: none;
-    color: black;
+    color: #CD5C5C;
 }
 
 .page-identifier {
-    color: black;
+    color: #CD5C5C;
     width: 20%;
     text-align: center;
     padding-bottom: 1%;
@@ -110,7 +111,7 @@ ul li:before {
 }
 
 .doe-text {
-    color: #808080;
+    color: #FFEBCD;
     width: 60%;
     text-align: left;
     padding-top: 15px;
@@ -122,7 +123,7 @@ ul li:before {
 span {
     display: inline-block;
     text-align: center;
-    color: #808080;
+    color: #CD5C5C;
 }
 
 /*.movie {

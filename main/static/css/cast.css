@@ -1,5 +1,5 @@
 .cast-text {
-    color: #808080;
+    color: #FFEBCD;
     width: 50%;
     display: block;
     text-align: center;
@@ -34,14 +34,14 @@
 
 .cast-name {
     text-decoration: none;
-    color: black;
+    color: #FFEBCD;
     font-family: "Open Sans Condensed", sans-serif;
     font-size: 19px;
 }
 
 .cast-name-black {
     text-decoration: none;
-    color: black;
+    color: #CD5C5C;
     font-family: "Open Sans Condensed", sans-serif;
     font-size: 30px;
 }

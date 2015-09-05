@@ -1,5 +1,5 @@
 .crew-text {
-    color: #808080;
+    color: #FFEBCD;
     width: 50%;
     display: block;
     text-align: center;
@@ -34,17 +34,16 @@
 
 .crew-name {
     text-decoration: none;
-    color: #808080;
+    color: #FFEBCD;
     font-family: "Open Sans Condensed", sans-serif;
     font-size: 25px;
 }
 
 .crew-name-black {
     text-decoration: none;
-    color: black;
+    color: #CD5C5C;
     font-family: "Open Sans Condensed", sans-serif;
     font-size: 30px;
-    border-right: 2px dashed black;
 }
 
 .of-note {
@@ -53,14 +52,14 @@
     display: block;
     text-align: center;
     margin-top: 30px;
-    color: #808080;
+    color: #FFEBCD;
     font-family: "Open Sans Condensed", sans-serif;
     font-size: 20px;
 }
 
 .coworker-of-note {
     text-decoration: none;
-    color: #808080;
+    color: #FFEBCD;
     font-family: "Open Sans Condensed", sans-serif;
     font-size: 15px;
     line-height: 25px;
@@ -68,10 +67,9 @@
 
 .of-note-black {
     text-decoration: none;
-    color: black;
+    color: #CD5C5C;
     font-family: "Open Sans Condensed", sans-serif;
     font-size: 25px;
-    border-right: 2px dashed black;
 }
 
 @media only screen and (max-width: 1545px) and (min-width: 1000px) {
