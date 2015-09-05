@@ -22,15 +22,25 @@ var reset = function() {
     
 }
 
+
 var currentID = ""
+var currentCrewID = ""
 
 var workerLinks = document.getElementsByClassName("crew-name")
+// var workerDetails = document.getElementsByClassName("crew")
+
 // debugger
 for(var i = 0; i < workerLinks.length; i++) {
     workerLinks[i].addEventListener('click', function(e) {
         e.preventDefault();
         // console.log(this.id)
         // debugger
+        var sel = this.id + '-context'
+        if(document.getElementById(sel).style.display == 'inline') {
+            document.getElementById(sel).style.display = 'none'
+        } else {
+            document.getElementById(sel).style.display = 'inline'
+        }
 
         if(currentID != '' && currentID != this.id) {
             document.getElementById(currentID).className = 'crew-name'
@@ -38,6 +48,13 @@ for(var i = 0; i < workerLinks.length; i++) {
         }
 
         currentID = this.id
+
+        if(currentCrewID != '' && currentCrewID != sel) {
+            document.getElementById(currentCrewID).style.display = 'none'
+            reset()
+        }
+
+        currentCrewID = sel
 
         if (highlighted) {
             this.className = 'crew-name'
@@ -54,7 +71,6 @@ for(var i = 0; i < workerLinks.length; i++) {
         }
     })
 };
-
 
 
 var workerLinks = document.getElementsByClassName("cast-name")
@@ -87,6 +103,7 @@ for(var i = 0; i < workerLinks.length; i++) {
     })
 };
 
+
 var workerLinks = document.getElementsByClassName("coworker-of-note")
 // debugger
 for(var i = 0; i < workerLinks.length; i++) {
@@ -116,4 +133,6 @@ for(var i = 0; i < workerLinks.length; i++) {
         }
     })
 };
+
+
 

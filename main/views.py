@@ -84,11 +84,10 @@ def crew(request):
 
     for row in crew_csv:
         name = row[0]
+        # print name
         total_movies = row[1]
         jobs = row[2]
         movie_titles = row[3]
-
-        # crew_array.append()
 
         crew_dict[name] = [
             total_movies,
@@ -96,7 +95,11 @@ def crew(request):
             jobs
         ]
 
+        # print crew_dict
+
     context['crew_members'] = crew_dict
+
+    # print context['crew_members']
 
     return render(request, 'crew.html', context)
 
@@ -112,8 +115,6 @@ def cast(request):
         name = row[0]
         total_movies = row[1]
         movie_titles = row[2]
-
-        # crew_array.append()
 
         cast_dict[name] = [
             total_movies,

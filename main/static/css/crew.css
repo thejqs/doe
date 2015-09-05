@@ -1,3 +1,7 @@
+.crew {
+    display: none;
+}
+
 .crew-text {
     color: #FFEBCD;
     width: 50%;
@@ -39,6 +43,12 @@
     font-size: 25px;
 }
 
+.context-type {
+    color: #CD5C5C;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 20px;
+}
+
 .crew-name-black {
     text-decoration: none;
     color: #CD5C5C;
@@ -52,7 +62,7 @@
     display: block;
     text-align: center;
     margin-top: 30px;
-    color: #FFEBCD;
+    color: #CD5C5C;
     font-family: "Open Sans Condensed", sans-serif;
     font-size: 20px;
 }
@@ -63,6 +73,21 @@
     font-family: "Open Sans Condensed", sans-serif;
     font-size: 15px;
     line-height: 25px;
+}
+
+.crew-number {
+    color: #FFEBCD;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 65px;
+    font-weight: bold;
+    line-height: 70px;
+    display: block;
+}
+
+.crew-details {
+    color: #FFEBCD;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 15px;
 }
 
 .of-note-black {
