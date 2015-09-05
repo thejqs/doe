@@ -1,6 +1,5 @@
 body {
-    background-color: #E6E6FA;
-    /*padding-bottom: 15px;*/
+    background-color: #AFEEEE;
 }
 
 h1 {
@@ -29,9 +28,9 @@ ul li:before {
     display: inline-block;
 }
 
-.movie-year {
+/*.movie-year {
     display: none;
-}
+}*/
 
 
 /*.modal {
@@ -56,7 +55,7 @@ ul li:before {
     background-color: rgba(0,0,0,.5);
 }*/
 
-.movie-details {
+/*.movie-details {
     display: none;
 }
 
@@ -88,7 +87,7 @@ ul li:before {
     height: 250px;
     margin: auto;
     padding-top: 20px;
-}
+}*/
 
 /*.doe-mug img {
     height: 75px;
@@ -170,7 +169,7 @@ span {
     /*float: right;*/
 /*}*/
 
-.revealmovie img {
+/*.revealmovie img {
     height: 125px;
 }
 
@@ -181,7 +180,7 @@ span {
     /*display: inline-block;*/
 }
 
-.timeline {
+/*.timeline {
     clear: both;
     position: relative;
     width: 100%;
@@ -211,14 +210,14 @@ span {
 
 .year:nth-child(odd) .shift-right {
     right: 50%;
-}
+}*/
 
-.shift-left, .shift-right {
+/*.shift-left, .shift-right {*/
     /*border: 1px solid blue;*/
-    display: inline-block;
+/*    display: inline-block;
     position: absolute;
     top: 0;
-}
+}*/
 
 .crew-text {
     color: #808080;
