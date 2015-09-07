@@ -1,3 +1,11 @@
+.of-note {
+    display: none;
+}
+
+.cast {
+    display: none;
+}
+
 .cast-text {
     color: #FFEBCD;
     width: 50%;
@@ -6,13 +14,13 @@
     font-size: 20px;
     font-family: "Open Sans Condensed", sans-serif;
     margin: auto;
-    margin-bottom: 30px;
+    margin-bottom: 1.5%;
 }
 
 .camera-set-cast {
-    border-left: 2px dotted black;
-    border-bottom: 2px dotted black;
-    border-right: 2px dotted black;
+    border-left: 2px dotted #FFEBCD;
+    border-bottom: 2px dotted #FFEBCD;
+    border-right: 2px dotted #FFEBCD;
     display: block;
     padding: 1.5%;
     width: 60%;
@@ -29,14 +37,13 @@
     width: 50%;
     display: block;
     text-align: center;
-    margin: auto;
 }
 
 .cast-name {
     text-decoration: none;
     color: #FFEBCD;
     font-family: "Open Sans Condensed", sans-serif;
-    font-size: 19px;
+    font-size: 21px;
 }
 
 .cast-name-black {
@@ -44,6 +51,27 @@
     color: #CD5C5C;
     font-family: "Open Sans Condensed", sans-serif;
     font-size: 30px;
+}
+
+.context-type {
+    color: #CD5C5C;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 20px;
+}
+
+.cast-number {
+    color: #FFEBCD;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 65px;
+    font-weight: bold;
+    line-height: 70px;
+    display: block;
+}
+
+.cast-details {
+    color: #FFEBCD;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 15px;
 }
 
 @media only screen and (max-width: 1545px) and (min-width: 1000px) {

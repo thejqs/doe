@@ -85,7 +85,26 @@ for(var i = 0; i < workerLinks.length; i++) {
         }
 
         currentID = this.id
+        var sel = this.id + '-context'
+        if(document.getElementById(sel).style.display == 'inline') {
+            document.getElementById(sel).style.display = 'none'
+        } else {
+            document.getElementById(sel).style.display = 'inline'
+        }
 
+        if(currentID != '' && currentID != this.id) {
+            document.getElementById(currentID).className = 'cast-name'
+            reset()
+        }
+
+        currentID = this.id
+
+        if(currentCrewID != '' && currentCrewID != sel) {
+            document.getElementById(currentCrewID).style.display = 'none'
+            reset()
+        }
+
+        currentCrewID = sel
 
         if (highlighted) {
             this.className = 'cast-name'

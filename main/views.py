@@ -121,7 +121,7 @@ def cast(request):
             movie_titles,
         ]
 
-    context['crew_members'] = cast_dict
+    context['cast_members'] = cast_dict
 
     return render(request, 'cast.html', context)
 

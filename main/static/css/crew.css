@@ -56,7 +56,8 @@
     font-size: 30px;
 }
 
-.of-note {
+/*.of-note {
+    display: none;
     width: 75%;
     margin: auto;
     display: block;
@@ -65,9 +66,10 @@
     color: #CD5C5C;
     font-family: "Open Sans Condensed", sans-serif;
     font-size: 20px;
-}
+}*/
 
 .coworker-of-note {
+    display: none;
     text-decoration: none;
     color: #FFEBCD;
     font-family: "Open Sans Condensed", sans-serif;
