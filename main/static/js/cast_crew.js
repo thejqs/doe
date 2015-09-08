@@ -115,8 +115,8 @@ for(var i = 0; i < workerLinks.length; i++) {
         this.className = 'cast-name-black'
         var number = this.getAttribute("data-number");
         for(var x = 1; x <= number; x++) {
-          var img = document.getElementById("movie" + x);
-          img.src = "/static/img/movie-camera-black.png"
+          var img = document.getElementById("movie" + x).style.display = 'none';
+          // img.src = "/static/img/movie-camera-black.png"
         }
     })
 };
@@ -146,8 +146,8 @@ for(var i = 0; i < workerLinks.length; i++) {
         this.className = 'of-note-black'
         var number = this.getAttribute("data-number");
         for(var x = 1; x <= number; x++) {
-          var img = document.getElementById("movie" + x);
-          img.src = "/static/img/movie-camera-black.png"
+          var img = document.getElementById("movie" + x).style.display = 'none';
+          // img.src = "/static/img/movie-camera-black.png"
         }
     })
 };
