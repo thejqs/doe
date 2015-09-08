@@ -34,7 +34,9 @@
 
 .cast-coworkers {
     margin-top: 20px;
-    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 45%;
     display: block;
     text-align: center;
 }
@@ -43,7 +45,7 @@
     text-decoration: none;
     color: #FFEBCD;
     font-family: "Open Sans Condensed", sans-serif;
-    font-size: 21px;
+    font-size: 20px;
 }
 
 .cast-name-black {

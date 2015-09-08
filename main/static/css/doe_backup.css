@@ -68,13 +68,17 @@ ul li:before {
 }*/
 
 .arthur-choice {
-    padding-top: 10px;
-    padding-bottom: 30px;
-    text-align: center;
     margin: auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
     color: #CD5C5C;
     font-family: "Open Sans Condensed", sans-serif;
     width: 30%;
+}
+
+.arthur-choice hr {
+    width: 20%;
 }
 
 .arthur-link {
@@ -270,24 +274,27 @@ span {
 .footer {
     font-family: "Open Sans Condensed", sans-serif;
     font-size: 10px;
+    width: 40%;
     text-align: right;
-    margin-right: 20%;
-    color: #808080;
-    padding-bottom: 15px;
+    margin: auto;
+    color: #FFEBCD;
+    padding-bottom: 2px;
     line-height: 12px;
     bottom: 0;
     position: relative;
+    border-top: 1px solid #FFEBCD;
+
 }
 
 .footer-link {
     text-decoration: none;
-    color: #808080;
+    color: #FFEBCD;
 }
 
-.footer-hr {
+/*.footer-hr {
     margin-top: 50px;
     width: 60%;
-}
+}*/
 
 /*@media only screen and (max-width: 1545px) and (min-width: 1000px) {
 

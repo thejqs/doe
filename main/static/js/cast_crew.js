@@ -93,7 +93,7 @@ for(var i = 0; i < workerLinks.length; i++) {
         }
 
         if(currentID != '' && currentID != this.id) {
-            document.getElementById(currentID).className = 'cast-name'
+            document.getElementById(currentID).className = 'crew-name'
             reset()
         }
 
