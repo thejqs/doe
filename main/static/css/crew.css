@@ -14,14 +14,12 @@
 }
 
 .camera-set {
-    /*border: 1px solid blue;*/
     display: inline-block;
     padding: 1.5%;
     width: 45%;
     float: left;
     margin-right: 0px;
     margin-bottom: 3%;
-    /*margin-right: 11%;*/
 }
 
 .camera-set img {
@@ -30,7 +28,6 @@
 }
 
 .crew-coworkers {
-    /*border: 1px solid red;    */
     width: 10%;
     height: 20%;
     display: inline-block;
@@ -83,7 +80,6 @@
 }
 
 .crew-number {
-    /*border: 1px solid green;*/
     color: #FFEBCD;
     font-family: "Open Sans Condensed", sans-serif;
     font-size: 65px;
@@ -94,7 +90,6 @@
 }
 
 .crew-details {
-    /*border: 1px solid green;*/
     color: #FFEBCD;
     font-family: "Open Sans Condensed", sans-serif;
     font-size: 15px;

@@ -14,7 +14,7 @@ var highlighted = false
 
 var reset = function() {
     for (var x = 1; x <= 88; x++) {
-        var img = document.getElementById("movie" + x);
+        var img = document.getElementById("movie" + x).style.display = 'inline';
         img.src = "/static/img/movie-camera-off-white.png";
     }
 
@@ -27,7 +27,6 @@ var currentID = ""
 var currentCrewID = ""
 
 var workerLinks = document.getElementsByClassName("crew-name")
-// var workerDetails = document.getElementsByClassName("crew")
 
 // debugger
 for(var i = 0; i < workerLinks.length; i++) {
@@ -66,8 +65,8 @@ for(var i = 0; i < workerLinks.length; i++) {
         this.className = 'crew-name-black'
         var number = this.getAttribute("data-number");
         for(var x = 1; x <= number; x++) {
-          var img = document.getElementById("movie" + x);
-          img.src = "/static/img/movie-camera-black.png"
+          var img = document.getElementById("movie" + x).style.display = 'none';
+          // img.src = "/static/img/movie-camera-black.png"
         }
     })
 };
