@@ -34,11 +34,11 @@ for(var i = 0; i < workerLinks.length; i++) {
         e.preventDefault();
         // console.log(this.id)
         // debugger
-        var sel = this.id + '-context'
-        if(document.getElementById(sel).style.display == 'inline') {
-            document.getElementById(sel).style.display = 'none'
+        var select = this.id + '-context'
+        if(document.getElementById(select).style.display == 'inline') {
+            document.getElementById(select).style.display = 'none'
         } else {
-            document.getElementById(sel).style.display = 'inline'
+            document.getElementById(select).style.display = 'inline'
         }
 
         if(currentID != '' && currentID != this.id) {
@@ -48,12 +48,12 @@ for(var i = 0; i < workerLinks.length; i++) {
 
         currentID = this.id
 
-        if(currentCrewID != '' && currentCrewID != sel) {
+        if(currentCrewID != '' && currentCrewID != select) {
             document.getElementById(currentCrewID).style.display = 'none'
             reset()
         }
 
-        currentCrewID = sel
+        currentCrewID = select
 
         if (highlighted) {
             this.className = 'crew-name'
@@ -84,26 +84,26 @@ for(var i = 0; i < workerLinks.length; i++) {
         }
 
         currentID = this.id
-        var sel = this.id + '-context'
-        if(document.getElementById(sel).style.display == 'inline') {
-            document.getElementById(sel).style.display = 'none'
+        var select = this.id + '-context'
+        if(document.getElementById(select).style.display == 'inline') {
+            document.getElementById(select).style.display = 'none'
         } else {
-            document.getElementById(sel).style.display = 'inline'
+            document.getElementById(select).style.display = 'inline'
         }
 
         if(currentID != '' && currentID != this.id) {
-            document.getElementById(currentID).className = 'crew-name'
+            document.getElementById(currentID).className = 'cast-name'
             reset()
         }
 
         currentID = this.id
 
-        if(currentCrewID != '' && currentCrewID != sel) {
+        if(currentCrewID != '' && currentCrewID != select) {
             document.getElementById(currentCrewID).style.display = 'none'
             reset()
         }
 
-        currentCrewID = sel
+        currentCrewID = select
 
         if (highlighted) {
             this.className = 'cast-name'
@@ -122,35 +122,43 @@ for(var i = 0; i < workerLinks.length; i++) {
 };
 
 
-var workerLinks = document.getElementsByClassName("coworker-of-note")
-// debugger
-for(var i = 0; i < workerLinks.length; i++) {
-    workerLinks[i].addEventListener('click', function(e) {
-        e.preventDefault();
-        // debugger
+// var workerLinks = document.getElementsByClassName("coworker-of-note")
+// // debugger
+// for(var i = 0; i < workerLinks.length; i++) {
+//     workerLinks[i].addEventListener('click', function(e) {
+//         e.preventDefault();
+//         // debugger
 
-        if(currentID != '' && currentID != this.id) {
-            document.getElementById(currentID).className = 'coworker-of-note'
-            reset()
-        }
+//         if(currentID != '' && currentID != this.id) {
+//             document.getElementById(currentID).className = 'coworker-of-note'
+//             reset()
+//         }
 
-        currentID = this.id
+//         currentID = this.id
 
-        if (highlighted) {
-            this.className = 'coworker-of-note'
-            reset();
-            return;
-        }
+//         if (highlighted) {
+//             this.className = 'coworker-of-note'
+//             reset();
+//             return;
+//         }
 
-        highlighted = true;
-        this.className = 'of-note-black'
-        var number = this.getAttribute("data-number");
-        for(var x = 1; x <= number; x++) {
-          var img = document.getElementById("movie" + x).style.display = 'none';
-          // img.src = "/static/img/movie-camera-black.png"
-        }
-    })
-};
-
-
+//         highlighted = true;
+//         this.className = 'of-note-black'
+//         var number = this.getAttribute("data-number");
+//         for(var x = 1; x <= number; x++) {
+//           var img = document.getElementById("movie" + x).style.display = 'none';
+//           // img.src = "/static/img/movie-camera-black.png"
+//         }
+//     })
+// };
+// $(document).ready(function() )
+// var makeNarrow = function() {
+//   var width = $(window).width()
+//   if (width < 799 && width > 420) {
+//     $('.crew-coworkers').removeClass('crew-coworkers').addClass('crew-coworkers-narrow');
+//     } else {
+//       $('.crew-coworkers-narrow').removeClass('crew-coworkers-narrow').addClass('crew-coworkers');
+//     }
+//   };
+//   $(window).resize(makeNarrow());
 

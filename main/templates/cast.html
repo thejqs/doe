@@ -75,9 +75,9 @@
                        {% endif %}
                     {% endfor %}
                 </div>
-                <div id="hobbe-context" class="cast">
+                <div id="hobbie-context" class="cast">
                         {% for name, cast_member in cast_members.items %}
-                       {% if name == 'Duke Hobbe' %}
+                       {% if name == 'Duke Hobbie' %}
                             <div class="cast-context">
                             <div class="cast-number">
                                 {{ cast_member.0 }}
@@ -355,7 +355,7 @@
  
                 <a id="durning" data-number="83" class="cast-name" href="#"> Charles Durning </a><span class="small-film-icon fa fa-film"></span> 
  
-                <a id="hobbe" data-number="83" class="cast-name" href="#"> Duke Hobbe </a><span class="small-film-icon fa fa-film"></span> 
+                <a id="hobbie" data-number="83" class="cast-name" href="#"> Duke Hobbie </a><span class="small-film-icon fa fa-film"></span> 
  
                 <a id="mazursky" data-number="83" class="cast-name" href="#"> Paul Mazursky </a><span class="small-film-icon fa fa-film"></span> 
  
@@ -398,5 +398,4 @@
 
 
 {% include 'footer.html' %}
-<script src="{% static 'js/cast_crew.js' %}"></script>
 {% endblock %}

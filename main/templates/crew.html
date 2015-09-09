@@ -15,7 +15,7 @@
         </div>
 
 
-        <div class="crew-coworkers">
+        <div class="crew-coworkers"> 
                                                         
                 <p><a id="fresholtz" data-number="42" class="crew-name" href="#">Les Fresholtz </a></p>
 
@@ -34,6 +34,8 @@
                 <p><a id="tyler" data-number="77" class="crew-name" href="#">Richard Tyler</a></p>
 
         </div>
+
+
         <div class="camera-set" id="camera-set">
                     <div id="fresholtz-context" class="crew">
                     {% for name, crew_member in crew_members.items %}
@@ -171,18 +173,14 @@
 
 
 
-
-
-
     <div class="arthur-choice">
         <hr style="border-top: 1px dotted">
                 <p><a class="arthur-link" href="/arthur/">arthur</a> | <a class="arthur-link" href="/movies/">films</a>
                  | <a class="arthur-link" href="/cast/">cast</a></p>
         <hr style="border-top: 1px dotted">
-                </div>
-                </div>
+        </div>
+        </div>
 
 
 {% include 'footer.html' %}
-<script src="{% static 'js/cast_crew.js' %}"></script>
 {% endblock %}

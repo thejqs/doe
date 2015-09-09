@@ -28,7 +28,7 @@
 
                                                 {% else %}
 
-                                                    <a class="revealmovie" href="#"><img src="{% static 'img/Film-3-icon.png' %}" alt="This movie had no poster, so we used a freely available illustration of cellulose film instead."></a>
+                                                    <a class="revealmovie" href="#"><img src="{% static 'img/default_image.jpg' %}" alt="This movie had no poster, so we used a freely available illustration of cellulose film instead."></a>
                                  
                                                 {% endif %}
 
@@ -40,7 +40,7 @@
                                                     {% if context.poster %}
                                                     <img src="{{ context.poster.url }}" alt="A larger view of the poster for {{ context.title }}">
                                                     {% else %}
-                                                    <img src="{% static 'img/Film-3-icon.png' %}" alt="This movie had no poster on IMDB, so we used a freely available illustration of cellulose film instead.">
+                                                    <img src="{% static 'img/default_image.jpg' %}" alt="This movie had no poster on IMDB, so we used a freely available illustration of cellulose film instead.">
                                                     {% endif %}
 
                                                     

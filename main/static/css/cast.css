@@ -89,7 +89,7 @@
 
     .cast-coworkers {
         margin-top: 20px;
-        width: 70%;
+        width: 60%;
         display: block;
         text-align: center;
         margin: auto;
@@ -104,17 +104,51 @@
 
 }
 
+@media only screen and (min-width: 421px) and (max-width: 999px) {
 
-
-@media only screen and (max-width: 999px) {
-
-    .camera-set {
-        width: 35%;
+    .camera-set-cast {
+        width: 60%;
     }
 
-    .camera-set img {
+    .camera-set-cast img {
         height: 25px;
+    }
+
+    .cast-coworkers {
+        width: 60%;
     }
 
 }
 
+@media only screen and (max-width: 420px) {
+
+    .cast-text {
+        width: 65%;
+    }
+
+    .camera-set-cast {
+        width: 80%;
+    }
+
+    .camera-set-cast img {
+        height: 20px;
+        padding: 1.5%;
+    }
+
+    .cast-name {
+        font-size: 17px;
+    }
+
+    .cast-coworkers {
+        width: 80%;
+    }
+
+    .cast-number {
+        text-align: center;
+    }
+
+    .cast-name-black {
+        font-size: 25px;
+    }
+
+}
