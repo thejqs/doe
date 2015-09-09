@@ -18,7 +18,7 @@ p {
     padding-bottom: 5%;
     text-align: center;
     color: #CD5C5C;
-    font-family: "Open Sans Condensed", sans-serif;
+    font-family: "Open Sans Condensed", "Arial Narrow", sans-serif;
     width: 30%;
 }
 
@@ -55,7 +55,7 @@ p {
     text-align: center;
     padding-bottom: 1%;
     font-size: 20px;
-    font-family: "Open Sans Condensed", sans-serif;
+    font-family: "Open Sans Condensed", "Arial Narrow", sans-serif;
     margin: auto;
 }
 
@@ -65,7 +65,7 @@ p {
     text-align: left;
     padding-top: 15px;
     font-size: 20px;
-    font-family: "Open Sans Condensed", sans-serif;
+    font-family: "Open Sans Condensed", "Arial Narrow", sans-serif;
     margin: auto;
 }
 
@@ -76,7 +76,7 @@ span {
 }
 
 .footer {
-    font-family: "Open Sans Condensed", sans-serif;
+    font-family: "Open Sans Condensed", "Arial Narrow", sans-serif;
     font-size: 10px;
     width: 40%;
     text-align: right;
