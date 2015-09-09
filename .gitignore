@@ -21,7 +21,7 @@ migrations/
 settings.py
 
 # Ignore generated staticfiles
-static/
+# static/
 
 # Distribution / packaging
 .Python
