@@ -2,7 +2,7 @@ import os, sys
 from django.shortcuts import render
 # from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import View
-
+from django.conf import settings
 import csv
 from collections import OrderedDict
 import ast
@@ -78,7 +78,7 @@ def movies(request):
 def crew(request):
     context = {}
 
-    crew_csv = csv.reader(open('scripts/counted_crew.csv', 'r'))
+    crew_csv = csv.reader(open(os.path.join(settings.BASE_DIR, 'scripts/counted_crew.csv'), 'r'))
 
     crew_dict = {}
 
@@ -107,7 +107,7 @@ def crew(request):
 def cast(request):
     context = {}
 
-    cast_csv = csv.reader(open('scripts/counted_cast.csv', 'r'))
+    cast_csv = csv.reader(open(os.path.join(settings.BASE_DIR, 'scripts/counted_cast.csv'), 'r'))
 
     cast_dict = {}
 
