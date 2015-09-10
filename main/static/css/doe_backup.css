@@ -55,7 +55,7 @@ p {
     text-align: center;
     padding-bottom: 1%;
     font-size: 20px;
-    font-family: "Open Sans Condensed", "Futura", "Arial Narrow", sans-serif;
+    font-family: "Open Sans Condensed", "Arial Narrow", sans-serif;
     margin: auto;
 }
 
@@ -65,7 +65,7 @@ p {
     text-align: left;
     padding-top: 15px;
     font-size: 20px;
-    font-family: "Open Sans Condensed", "Futura", "Arial Narrow", sans-serif;
+    font-family: "Open Sans Condensed", "Arial Narrow", sans-serif;
     margin: auto;
 }
 
@@ -76,18 +76,17 @@ span {
 }
 
 .footer {
-    font-family: "Open Sans Condensed", "Futura", "Arial Narrow", sans-serif;
+    font-family: "Open Sans Condensed", "Arial Narrow", sans-serif;
     font-size: 10px;
     width: 40%;
     text-align: right;
-    margin: auto;
+    margin-left: 30%;
     color: #FFEBCD;
     padding-bottom: 2px;
     line-height: 12px;
     bottom: 0;
-    position: relative;
     border-top: 1px solid #FFEBCD;
-
+    position: relative;
 }
 
 .footer-link {
