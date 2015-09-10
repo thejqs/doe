@@ -64,9 +64,8 @@
 .cast-number {
     color: #FFEBCD;
     font-family: "Open Sans Condensed", sans-serif;
-    font-size: 65px;
+    font-size: 500%;
     font-weight: bold;
-    line-height: 70px;
     display: block;
 }
 
