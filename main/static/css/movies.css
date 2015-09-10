@@ -57,9 +57,9 @@ ul li:before {
 }
 
 .movie {
-    border: 1px solid #FFEBCD;
-    margin: 4px;
+    margin: 6px;
     display: inline-block;
+    box-shadow: 2px 2px 2px rgba(255, 235, 205, .9);
 }
 
 .revealmovie img {
