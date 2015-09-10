@@ -102,21 +102,38 @@
         font-size: 20px;
     }
 
+    .cast-number {
+        font-size: 500%;
+    }
+
 }
 
 @media only screen and (min-width: 421px) and (max-width: 999px) {
 
     .camera-set-cast {
-        width: 60%;
+        width: 80%;
     }
 
     .camera-set-cast img {
-        height: 25px;
+        height: 30px;
+        padding: 2px;
     }
 
     .cast-coworkers {
         width: 60%;
     }
+
+    .cast-number {
+        font-size: 750%;
+        line-height: 105%;
+        text-align: center;
+    }
+
+/*    .context-type {
+        font-size: 30px;
+    }
+
+*/
 
 }
 
@@ -131,8 +148,8 @@
     }
 
     .camera-set-cast img {
-        height: 20px;
-        padding: 1.5%;
+        height: 21px;
+        padding: 1%;
     }
 
     .cast-name {
@@ -144,11 +161,18 @@
     }
 
     .cast-number {
+        font-size: 750%;
+        line-height: 100.5%;
         text-align: center;
     }
 
     .cast-name-black {
         font-size: 25px;
+    }
+
+    .cast-details {
+        font-size: 20px;
+        line-height: 120%;
     }
 
 }
