@@ -36,12 +36,23 @@
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    width: 45%;
+    width: 50%;
     display: block;
     text-align: center;
 }
 
+.cast-coworkers span {
+    color: #FFEBCD;
+}
+
 .cast-name {
+    text-decoration: none;
+    color: #CD5C5C;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 20px;
+}
+
+.cast-name:hover {
     text-decoration: none;
     color: #FFEBCD;
     font-family: "Open Sans Condensed", sans-serif;
@@ -50,9 +61,9 @@
 
 .cast-name-black {
     text-decoration: none;
-    color: #CD5C5C;
+    color: #FFEBCD;
     font-family: "Open Sans Condensed", sans-serif;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .context-type {
@@ -89,7 +100,7 @@
 
     .cast-coworkers {
         margin-top: 20px;
-        width: 60%;
+        width: 65%;
         display: block;
         text-align: center;
         margin: auto;
@@ -108,7 +119,12 @@
 
 }
 
+
 @media only screen and (min-width: 421px) and (max-width: 999px) {
+
+    .cast-text {
+        width: 70%;
+    }
 
     .camera-set-cast {
         width: 80%;
@@ -156,6 +172,14 @@
         font-size: 17px;
     }
 
+    .cast-name:hover {
+        font-size: 17px;
+    }
+
+    .cast-name-black {
+        font-size: 17px;
+    }
+
     .cast-coworkers {
         width: 80%;
     }
@@ -164,10 +188,6 @@
         font-size: 750%;
         line-height: 100.5%;
         text-align: center;
-    }
-
-    .cast-name-black {
-        font-size: 25px;
     }
 
     .cast-details {

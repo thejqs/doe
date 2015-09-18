@@ -20,6 +20,7 @@ p {
     color: #CD5C5C;
     font-family: "Open Sans Condensed", "Arial Narrow", sans-serif;
     width: 30%;
+    position: relative;
 }
 
 .arthur-choice hr {
@@ -94,6 +95,17 @@ span {
     color: #FFEBCD;
 }
 
+@media only screen and (min-width: 481px) and (max-width: 1480px) {
+    
+    #arthur {
+        padding-top: 2%;
+    }
+
+    .doe-text {
+        width: 65%;
+    }
+
+}
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
 

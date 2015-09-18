@@ -3,8 +3,8 @@ var cameraSet = document.getElementById('camera-set');
 for (var x = 1; x <= 88; x++) {
 
     var img = document.createElement('IMG');
-    img.id = "movie" + x
-    img.src = "/static/img/movie-camera-off-white.png";
+    img.id = 'movie' + x
+    img.src = '/static/img/movie-camera-off-white.png';
     cameraSet.appendChild(img);
 }
 
@@ -14,8 +14,8 @@ var highlighted = false
 
 var reset = function() {
     for (var x = 1; x <= 88; x++) {
-        var img = document.getElementById("movie" + x).style.display = 'inline';
-        img.src = "/static/img/movie-camera-off-white.png";
+        var img = document.getElementById('movie' + x).style.display = 'inline';
+        img.src = '/static/img/movie-camera-off-white.png';
     }
 
     highlighted = false;
@@ -26,7 +26,7 @@ var reset = function() {
 var currentID = ""
 var currentCrewID = ""
 
-var workerLinks = document.getElementsByClassName("crew-name")
+var workerLinks = document.getElementsByClassName('crew-name')
 
 // debugger
 for(var i = 0; i < workerLinks.length; i++) {
@@ -63,16 +63,16 @@ for(var i = 0; i < workerLinks.length; i++) {
 
         highlighted = true;
         this.className = 'crew-name-black'
-        var number = this.getAttribute("data-number");
+        var number = this.getAttribute('data-number');
         for(var x = 1; x <= number; x++) {
-          var img = document.getElementById("movie" + x).style.display = 'none';
+          var img = document.getElementById('movie' + x).style.display = 'none';
           // img.src = "/static/img/movie-camera-black.png"
         }
     })
 };
 
 
-var workerLinks = document.getElementsByClassName("cast-name")
+var workerLinks = document.getElementsByClassName('cast-name')
 
 for(var i = 0; i < workerLinks.length; i++) {
     workerLinks[i].addEventListener('click', function(e) {
@@ -113,9 +113,9 @@ for(var i = 0; i < workerLinks.length; i++) {
 
         highlighted = true;
         this.className = 'cast-name-black'
-        var number = this.getAttribute("data-number");
+        var number = this.getAttribute('data-number');
         for(var x = 1; x <= number; x++) {
-          var img = document.getElementById("movie" + x).style.display = 'none';
+          var img = document.getElementById('movie' + x).style.display = 'none';
           // img.src = "/static/img/movie-camera-black.png"
         }
     })

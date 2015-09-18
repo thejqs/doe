@@ -44,7 +44,7 @@
 
 .crew-name {
     text-decoration: none;
-    color: #FFEBCD;
+    color: #CD5C5C;
     font-family: "Open Sans Condensed", sans-serif;
     font-size: 25px;
 }
@@ -55,11 +55,18 @@
     font-size: 20px;
 }
 
+.crew-name:hover {
+    text-decoration: none;
+    color: #FFEBCD;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 25px;
+}
+
 .crew-name-black {
     text-decoration: none;
-    color: #CD5C5C;
+    color: #FFEBCD;
     font-family: "Open Sans Condensed", sans-serif;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 /*.of-note {
@@ -74,14 +81,14 @@
     font-size: 20px;
 }*/
 
-.coworker-of-note {
+/*.coworker-of-note {
     display: none;
     text-decoration: none;
     color: #FFEBCD;
     font-family: "Open Sans Condensed", sans-serif;
     font-size: 15px;
     line-height: 25px;
-}
+}*/
 
 .crew-number {
     color: #FFEBCD;
@@ -100,14 +107,14 @@
     font-size: 15px;
 }
 
-.of-note-black {
+/*.of-note-black {
     text-decoration: none;
     color: #CD5C5C;
     font-family: "Open Sans Condensed", sans-serif;
-    font-size: 25px;
-}
+    font-size: 25px;*/
 
-@media only screen and (max-width: 1545px) and (min-width: 1000px) {
+
+@media only screen and (min-width: 1000px) and (max-width: 1545px) {
 
     .crew-coworkers {
         width: 20%;
@@ -126,12 +133,8 @@
         font-size: 400%;
     }
 
-   .crew-name {
-        font-size: 25px;
-    }
-
-    .crew-name-black {
-        font-size: 35px;
+    .crew-text {
+        width: 65%;
     }
 
 }
@@ -139,7 +142,7 @@
 @media only screen and (min-width: 800px) and (max-width: 999px) {
 
     .crew-text {
-        width: 70%;
+        width: 77%;
     }
 
     .camera-set {
@@ -150,10 +153,6 @@
 
     .camera-set img {
         height: 35px;
-    }
-
-    .crew-name {
-        font-size: 25px;
     }
 
     .crew-coworkers {
@@ -167,7 +166,6 @@
     }
 
 }
-
 
 @media only screen and (min-width: 421px) and (max-width: 799px) {
     .camera-set {
@@ -190,7 +188,11 @@
     }
 
     .crew-name-black {
-        font-size: 25px;
+        font-size: 18px;
+    }
+
+    .crew-name:hover {
+        font-size: 18px;
     }
 
 }
@@ -225,9 +227,14 @@
         margin-right: 3px;
     }
 
+    .crew-name:hover {
+        font-size: 18px;
+        margin-right: 3px;
+    }
 
     .crew-name-black {
-        font-size: 20px;
+        font-size: 18px;
+        margin-right: 3px;
     }
 
     .crew-number {
