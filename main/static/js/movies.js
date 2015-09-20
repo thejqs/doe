@@ -16,6 +16,11 @@ $('.backdrop').click(function(e) {
 });
 
 
+$('.movie-details-inner').click(function(e) {
+    $('.movie-details').fadeOut('fast')
+});
+
+
 $(document).ready(function(){
     $('[data-title="show-title"]').tooltip
 });
