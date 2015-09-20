@@ -1,4 +1,5 @@
 This is Arthur.
+===============
 
 At its core this is a web scraper for IMDB using Python and lxml. It begins at a person's page, opens all the links in their filmography, captures contextual data about each movie -- the name, year of release, the poster, a truncated description, genres -- then opens the link to the full cast and crew and grabs that, dumping it all into a database.
 
