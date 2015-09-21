@@ -16,7 +16,8 @@ $('.backdrop').click(function(e) {
 });
 
 
-$('.movie-details-inner').click(function(e) {
+$(".movie-details").click(function(e) {
+    // e.stopPropagation();
     $('.movie-details').fadeOut('fast')
 });
 
