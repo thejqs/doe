@@ -19,9 +19,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '&+-ftef24_5mx%b6#%s*a^bei8q%vry(_w+aiaf*_k8j^-s(r9'
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -72,21 +69,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'project.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/1.8/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'doe',
-        'HOST': '127.0.0.1',
-        'USER': 'root',
-        'PASSWORD': 'Sin@tra2',
-        'PORT': '',
-    }
-}
-
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
@@ -115,3 +97,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates'),
 )
+
+from settings_local import *
