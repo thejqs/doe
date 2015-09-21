@@ -23,47 +23,56 @@
     border-right: 2px dotted #FFEBCD;
     display: block;
     padding: 1.5%;
-    width: 60%;
+    width: 65%;
     margin: auto;
 }
 
 .camera-set-cast img {
-    height: 40px;
+    width: 3%;
     padding: 3px;
 }
 
 .cast-coworkers {
-    margin-top: 20px;
+    border-left: 2px dotted #FFEBCD;
+    border-top: 2px dotted #FFEBCD;
+    border-right: 2px dotted #FFEBCD;
+    margin-top: 4%;
+    margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 65%;
+    padding: 1.5%;
     display: block;
-    text-align: center;
-}
-
-.cast-coworkers span {
-    color: #FFEBCD;
+    text-align: right;
 }
 
 .cast-name {
     text-decoration: none;
     color: #CD5C5C;
     font-family: "Open Sans Condensed", sans-serif;
-    font-size: 20px;
+    font-size: 23px;
+    margin-right: 1%;
+    line-height: 200%;
 }
 
 .cast-name:hover {
     text-decoration: none;
     color: #FFEBCD;
     font-family: "Open Sans Condensed", sans-serif;
-    font-size: 20px;
+    font-size: 23px;
+    margin-right: 1%;
+    line-height: 200%;
+    text-align: right;
 }
 
 .cast-name-black {
     text-decoration: none;
     color: #FFEBCD;
     font-family: "Open Sans Condensed", sans-serif;
-    font-size: 20px;
+    font-size: 23px;
+    margin-right: 1%;
+    line-height: 200%;
+    text-align: right;
 }
 
 .context-type {
@@ -93,10 +102,10 @@
         width: 65%;
     }
 
-    .camera-set-cast img {
+/*    .camera-set-cast img {
         height: 30px;
         padding: 3px;
-    }
+    }*/
 
     .cast-coworkers {
         margin-top: 20px;
@@ -130,13 +139,13 @@
         width: 80%;
     }
 
-    .camera-set-cast img {
+ /*   .camera-set-cast img {
         height: 30px;
         padding: 2px;
-    }
+    }*/
 
     .cast-coworkers {
-        width: 60%;
+        width: 80%;
     }
 
     .cast-number {
@@ -163,10 +172,10 @@
         width: 80%;
     }
 
-    .camera-set-cast img {
+/*    .camera-set-cast img {
         height: 21px;
         padding: 1%;
-    }
+    }*/
 
     .cast-name {
         font-size: 17px;

@@ -1,7 +1,6 @@
 var cameraSet = document.getElementById('camera-set');
 
 for (var x = 1; x <= 88; x++) {
-
     var img = document.createElement('IMG');
     img.id = 'movie' + x
     img.src = '/static/img/movie-camera-off-white.png';
@@ -14,7 +13,8 @@ var highlighted = false
 
 var reset = function() {
     for (var x = 1; x <= 88; x++) {
-        var img = document.getElementById('movie' + x).style.display = 'inline';
+        var img = document.getElementById('movie' + x)
+        img.style.display = 'inline';
         img.src = '/static/img/movie-camera-off-white.png';
     }
 
@@ -32,7 +32,6 @@ var workerLinks = document.getElementsByClassName('crew-name')
 for(var i = 0; i < workerLinks.length; i++) {
     workerLinks[i].addEventListener('click', function(e) {
         e.preventDefault();
-        // console.log(this.id)
         // debugger
         var select = this.id + '-context'
         if(document.getElementById(select).style.display == 'inline') {
@@ -40,21 +39,18 @@ for(var i = 0; i < workerLinks.length; i++) {
         } else {
             document.getElementById(select).style.display = 'inline'
         }
-
         if(currentID != '' && currentID != this.id) {
             document.getElementById(currentID).className = 'crew-name'
-            reset()
+            reset();
         }
 
         currentID = this.id
-
         if(currentCrewID != '' && currentCrewID != select) {
             document.getElementById(currentCrewID).style.display = 'none'
-            reset()
+            reset();
         }
 
         currentCrewID = select
-
         if (highlighted) {
             this.className = 'crew-name'
             reset();
@@ -65,9 +61,32 @@ for(var i = 0; i < workerLinks.length; i++) {
         this.className = 'crew-name-black'
         var number = this.getAttribute('data-number');
         for(var x = 1; x <= number; x++) {
-          var img = document.getElementById('movie' + x).style.display = 'none';
-          // img.src = "/static/img/movie-camera-black.png"
+        var img = document.getElementById('movie' + x)
+        img.style.display = 'none';
+        // img.src = "/static/img/movie-camera-red.png"
         }
+    })
+};
+
+for(var i = 0; i < workerLinks.length; i++) {
+    workerLinks[i].addEventListener('mouseenter', function(e) {
+        var cameras = 88 - this.getAttribute('data-number');
+        for (var x = 1; x <= cameras; x++) {
+            var img = document.getElementById('movie' + x)
+            img.src = '/static/img/movie-camera-red.png';
+        };
+    })
+};
+
+for(var i = 0; i < workerLinks.length; i++) {
+    workerLinks[i].addEventListener('mouseout', function(e) {
+        if (this.className == 'crew-name') {
+            var cameras = 88 - this.getAttribute('data-number');
+            for (var x = 1; x <= cameras; x++) {
+                var img = document.getElementById('movie' + x)
+                img.src = '/static/img/movie-camera-off-white.png';
+            }
+        };
     })
 };
 
@@ -118,6 +137,29 @@ for(var i = 0; i < workerLinks.length; i++) {
           var img = document.getElementById('movie' + x).style.display = 'none';
           // img.src = "/static/img/movie-camera-black.png"
         }
+    })
+};
+
+
+for(var i = 0; i < workerLinks.length; i++) {
+    workerLinks[i].addEventListener('mouseenter', function(e) {
+        var cameras = 88 - this.getAttribute('data-number');
+        for (var x = 1; x <= cameras; x++) {
+            var img = document.getElementById('movie' + x)
+            img.src = '/static/img/movie-camera-red.png';
+        };
+    })
+};
+
+for(var i = 0; i < workerLinks.length; i++) {
+    workerLinks[i].addEventListener('mouseout', function(e) {
+        if (this.className == 'cast-name') {
+            var cameras = 88 - this.getAttribute('data-number');
+            for (var x = 1; x <= cameras; x++) {
+                var img = document.getElementById('movie' + x)
+                img.src = '/static/img/movie-camera-off-white.png';
+            }
+        };
     })
 };
 

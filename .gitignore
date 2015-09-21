@@ -18,7 +18,7 @@ migrations/
 # Ignore local configuration
 *.db
 *.db-journal
-settings.py
+settings_local.py
 
 # Ignore generated staticfiles
 # static/

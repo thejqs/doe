@@ -24,10 +24,11 @@
     float: left;
     margin-right: 0px;
     margin-bottom: 3%;
+    border-left: 1px dotted #FFEBCD;
 }
 
 .camera-set img {
-    height: 45px;
+    width: 6.7%;
     padding: 3px;
 }
 
@@ -125,9 +126,9 @@
         margin-bottom: 10%;
     }
 
-    .camera-set img {
+/*    .camera-set img {
         height: 35px;
-    }
+    }*/
 
     .crew-number {
         font-size: 400%;
@@ -151,9 +152,9 @@
         margin-bottom: 15%;
     }
 
-    .camera-set img {
+/*    .camera-set img {
         height: 35px;
-    }
+    }*/
 
     .crew-coworkers {
         /*border: 1px solid red;*/
@@ -173,9 +174,9 @@
         margin-bottom: 15%;
     }
 
-    .camera-set img {
+/*    .camera-set img {
         height: 28px;
-    }
+    }*/
 
     .crew-coworkers {
         margin-right: 1%;
@@ -211,9 +212,9 @@
     }
 
 
-    .camera-set img {
+ /*   .camera-set img {
         height: 23px;
-    }
+    }*/
 
 
     .crew-coworkers {

@@ -125,6 +125,3 @@ def cast(request):
 
     return render(request, 'cast.html', context)
 
-
-def experiment(request):
-    return render(request, 'experiment.html')
