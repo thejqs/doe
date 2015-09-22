@@ -1,3 +1,5 @@
+// Pulls in all the camera-icon images in a loop
+// TODO: Tie each icon to a specific movie
 var cameraSet = document.getElementById('camera-set');
 
 for (var x = 1; x <= 88; x++) {
@@ -10,7 +12,7 @@ for (var x = 1; x <= 88; x++) {
 
 var highlighted = false
 
-
+// Puts reset of the full icon set into one callable place
 var reset = function() {
     for (var x = 1; x <= 88; x++) {
         var img = document.getElementById('movie' + x)
@@ -28,35 +30,45 @@ var currentCrewID = ""
 
 var workerLinks = document.getElementsByClassName('crew-name')
 
-// debugger
+// This event listener gets more complicated the more complex the page gets.
+// There's a better way to do this. Ripe for refactoring.
 for(var i = 0; i < workerLinks.length; i++) {
     workerLinks[i].addEventListener('click', function(e) {
         e.preventDefault();
-        // debugger
+
+        // Hits the ID for the contextual data and sets its state
         var select = this.id + '-context'
         if(document.getElementById(select).style.display == 'inline') {
             document.getElementById(select).style.display = 'none'
         } else {
             document.getElementById(select).style.display = 'inline'
         }
+
+        // resets the name class and the icon set on a click on another name
         if(currentID != '' && currentID != this.id) {
             document.getElementById(currentID).className = 'crew-name'
             reset();
         }
 
         currentID = this.id
+
+        // resets the name class on a second click on the same name
         if(currentCrewID != '' && currentCrewID != select) {
             document.getElementById(currentCrewID).style.display = 'none'
             reset();
         }
 
         currentCrewID = select
+
+        // resets the icon set on a second click on the same name
         if (highlighted) {
             this.className = 'crew-name'
             reset();
             return;
         }
 
+        // switches name class on first click for highlighting 
+        // and displays the the correct number of icons
         highlighted = true;
         this.className = 'crew-name-black'
         var number = this.getAttribute('data-number');
@@ -69,7 +81,8 @@ for(var i = 0; i < workerLinks.length; i++) {
 };
 
 
-
+// makes sure none of the names have been clicked for mouse event;
+// highlights the correct number of images in the full set for each name hovered
 for(var i = 0; i < workerLinks.length; i++) {
     workerLinks[i].addEventListener('mouseenter', function(e) {
         if (document.getElementsByClassName('crew-name-black').length == 0) {
@@ -82,9 +95,11 @@ for(var i = 0; i < workerLinks.length; i++) {
     })
 };
 
+// YAY FOR MOSTLY REPEATING MYSELF
+// refactoring will be fun oh so much fun oh baby
 for(var i = 0; i < workerLinks.length; i++) {
     workerLinks[i].addEventListener('mouseout', function(e) {
-        // if (this.className == 'crew-name') {
+        // if (document.getElementsByClassName('crew-name-black').length == 0) {
             var cameras = this.getAttribute('data-number');
             for (var x = 1; x <= cameras; x++) {
                 var img = document.getElementById('movie' + x)
@@ -95,6 +110,10 @@ for(var i = 0; i < workerLinks.length; i++) {
 };
 
 
+// SPEAKING OF REPEATING MYSELF:
+// adds the same behavior to the cast page, which has different IDs
+// in part because its size-related CSS rules are a bit different;
+// Not great, Bob!
 var workerLinks = document.getElementsByClassName('cast-name')
 
 for(var i = 0; i < workerLinks.length; i++) {
@@ -147,10 +166,13 @@ for(var i = 0; i < workerLinks.length; i++) {
 
 for(var i = 0; i < workerLinks.length; i++) {
     workerLinks[i].addEventListener('mouseenter', function(e) {
-        var cameras = 88 - this.getAttribute('data-number');
-        for (var x = 1; x <= cameras; x++) {
-            var img = document.getElementById('movie' + x)
-            img.src = '/static/img/movie-camera-red.png';
+        if (document.getElementsByClassName('crew-name-black').length == 0) {
+
+            var cameras = 88 - this.getAttribute('data-number');
+            for (var x = 1; x <= cameras; x++) {
+                var img = document.getElementById('movie' + x)
+                img.src = '/static/img/movie-camera-red.png';
+            }
         };
     })
 };
