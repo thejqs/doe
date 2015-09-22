@@ -1,3 +1,10 @@
+body {
+    background-image: url('../img/doe_background.jpg');
+    background-size: 105%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 .crew {
     display: none;
 }
@@ -11,10 +18,10 @@
     width: 50%;
     display: block;
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
     font-family: "Open Sans Condensed", sans-serif;
     margin: auto;
-    margin-bottom: 1.5%;
+    margin-bottom: 6%;
 }
 
 .camera-set {
@@ -23,8 +30,8 @@
     width: 45%;
     float: left;
     margin-right: 0px;
-    margin-bottom: 3%;
-    border-left: 1px dotted #FFEBCD;
+    margin-bottom: 20%;
+    margin-top: 2%;
 }
 
 .camera-set img {
@@ -34,20 +41,23 @@
 
 .crew-coworkers {
     width: 10%;
-    height: 20%;
+    /*height: 20%;*/
     display: inline-block;
     text-align: right;
     float: left;
     margin-left: 20%;
     margin-right: 1%;
-    padding: .5%;
+    padding: 1%;
+    border-right: 1px dotted #FFEBCD;
+
 }
 
 .crew-name {
     text-decoration: none;
     color: #CD5C5C;
     font-family: "Open Sans Condensed", sans-serif;
-    font-size: 25px;
+    font-size: 200%;
+    line-height: 150%;
 }
 
 .context-type {
@@ -60,14 +70,15 @@
     text-decoration: none;
     color: #FFEBCD;
     font-family: "Open Sans Condensed", sans-serif;
-    font-size: 25px;
+    font-size: 200%;
 }
 
 .crew-name-black {
     text-decoration: none;
     color: #FFEBCD;
     font-family: "Open Sans Condensed", sans-serif;
-    font-size: 25px;
+    font-size: 200%;
+    line-height: 150%;
 }
 
 /*.of-note {
@@ -140,7 +151,7 @@
 
 }
 
-@media only screen and (min-width: 800px) and (max-width: 999px) {
+@media only screen and (min-width: 807px) and (max-width: 999px) {
 
     .crew-text {
         width: 77%;
@@ -165,10 +176,14 @@
     .crew-number {
         font-size: 400%;
     }
+    
+    body {
+        background-size: 125%;
+    }
 
 }
 
-@media only screen and (min-width: 421px) and (max-width: 799px) {
+@media only screen and (min-width: 421px) and (max-width: 806px) {
     .camera-set {
         width: 65%;
         margin-bottom: 15%;
@@ -184,6 +199,10 @@
         margin-left: 5%;
     }
 
+    .crew-text {
+        width: 80%;
+    }
+
     .crew-name {
         font-size: 18px;
     }
@@ -196,8 +215,10 @@
         font-size: 18px;
     }
 
+    body {
+        background-size: 235%;
+    }
 }
-
 
 @media only screen and (min-width: 320px) and (max-width: 420px) {
 
