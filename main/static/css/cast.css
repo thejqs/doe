@@ -22,7 +22,7 @@ body {
     font-size: 20px;
     font-family: "Open Sans Condensed", sans-serif;
     margin: auto;
-    margin-bottom: 6%;
+    margin-bottom: 5%;
 }
 
 .camera-set-cast {
@@ -37,7 +37,7 @@ body {
 
 .camera-set-cast img {
     width: 3%;
-    padding: 3px;
+    padding: .5%;
 }
 
 .cast-coworkers {
@@ -108,10 +108,10 @@ body {
         width: 65%;
     }
 
-/*    .camera-set-cast img {
-        height: 30px;
-        padding: 3px;
-    }*/
+    .camera-set-cast img {
+        width: 5%;
+        padding: .75%;
+    }
 
     .cast-coworkers {
         margin-top: 20px;
@@ -144,11 +144,6 @@ body {
     .camera-set-cast {
         width: 80%;
     }
-
- /*   .camera-set-cast img {
-        height: 30px;
-        padding: 2px;
-    }*/
 
     .cast-coworkers {
         width: 80%;
@@ -233,10 +228,6 @@ body {
     .cast-name-black {
         font-size: 17px;
     }
-
-/*    .cast-coworkers {
-        width: 80%;
-    }*/
 
     .cast-number {
         font-size: 750%;
