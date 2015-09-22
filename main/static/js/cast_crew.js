@@ -68,12 +68,16 @@ for(var i = 0; i < workerLinks.length; i++) {
     })
 };
 
+
+
 for(var i = 0; i < workerLinks.length; i++) {
     workerLinks[i].addEventListener('mouseenter', function(e) {
-        var cameras = this.getAttribute('data-number');
-        for (var x = 1; x <= cameras; x++) {
-            var img = document.getElementById('movie' + x)
-            img.src = '/static/img/movie-camera-red.png';
+        if (document.getElementsByClassName('crew-name-black').length == 0) {
+            var cameras = this.getAttribute('data-number');
+            for (var x = 1; x <= cameras; x++) {
+                var img = document.getElementById('movie' + x)
+                img.src = '/static/img/movie-camera-red.png';
+            }
         };
     })
 };
