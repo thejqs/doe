@@ -60,7 +60,7 @@ for(var i = 0; i < workerLinks.length; i++) {
         highlighted = true;
         this.className = 'crew-name-black'
         var number = this.getAttribute('data-number');
-        for(var x = 1; x <= number; x++) {
+        for(var x = 88; x >= number - -1; x--) {
         var img = document.getElementById('movie' + x)
         img.style.display = 'none';
         // img.src = "/static/img/movie-camera-red.png"
@@ -70,7 +70,7 @@ for(var i = 0; i < workerLinks.length; i++) {
 
 for(var i = 0; i < workerLinks.length; i++) {
     workerLinks[i].addEventListener('mouseenter', function(e) {
-        var cameras = 88 - this.getAttribute('data-number');
+        var cameras = this.getAttribute('data-number');
         for (var x = 1; x <= cameras; x++) {
             var img = document.getElementById('movie' + x)
             img.src = '/static/img/movie-camera-red.png';
@@ -80,12 +80,12 @@ for(var i = 0; i < workerLinks.length; i++) {
 
 for(var i = 0; i < workerLinks.length; i++) {
     workerLinks[i].addEventListener('mouseout', function(e) {
-        if (this.className == 'crew-name') {
-            var cameras = 88 - this.getAttribute('data-number');
+        // if (this.className == 'crew-name') {
+            var cameras = this.getAttribute('data-number');
             for (var x = 1; x <= cameras; x++) {
                 var img = document.getElementById('movie' + x)
                 img.src = '/static/img/movie-camera-off-white.png';
-            }
+            // }
         };
     })
 };

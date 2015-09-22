@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
+{% block head %}
+        <link rel="stylesheet" href="{% static 'css/crew.css' %}" type="text/css">
+{% endblock %}
+
 {% block content %}
 <div class="container">
         <div class="page-identifier">
@@ -11,26 +15,26 @@
                 <p>Arthur Piantadosi worked on each of the 88 movies this set represents. Often enough, his wasn't the only name to repeat from one to another. With some people he shared a credit list quite often. Others not so much.</p> 
                 <p>Here we can see some of those relationships for ourselves.</p>
                 <p>These are the eight crew members with whom he worked most often. Click a name and for each time they worked together, one image in the set will remain and a few details will reveal themselves.</p>
-                <p><a class="arthur-link" alt="Arthur Piantadosi, second row from the bottom and fourth from the left, with the Academy of Motion Picture Arts and Sciences board of governors and Oscar, circa 1970s." title="Arthur Piantadosi and the Academy's board of governors." target="_blank" href="{% static 'img/doe2.jpg' %}"><span class="small-film-icon fa fa-film"></span></a></p>    
+                <p><span class="small-film-icon fa fa-film"></span></p>    
         </div>
 
         <div class="crew-coworkers"> 
                                                         
-                <p><a id="fresholtz" data-number="42" class="crew-name" href="#">Les Fresholtz </a></p>
+                <p><a id="fresholtz" data-number="46" class="crew-name" href="#">Les Fresholtz </a></p>
 
-                <p><a id="wallin" data-number="58" class="crew-name" href="#">Dan Wallin </a></p>
+                <p><a id="wallin" data-number="30" class="crew-name" href="#">Dan Wallin </a></p>
   
-                <p><a id="minkler" data-number="65" class="crew-name" href="#">Michael Minkler </a></p>
+                <p><a id="minkler" data-number="23" class="crew-name" href="#">Michael Minkler </a></p>
   
-                <p><a id="lane" data-number="76" class="crew-name" href="#">Ben Lane </a></p>
+                <p><a id="lane" data-number="12" class="crew-name" href="#">Ben Lane </a></p>
   
-                <p><a id="frankovich" data-number="76" class="crew-name" href="#">M.J. Frankovich </a></p>
+                <p><a id="frankovich" data-number="12" class="crew-name" href="#">M.J. Frankovich </a></p>
   
-                <p><a id="vjones" data-number="76" class="crew-name" href="#">Virginia Jones </a></p>
+                <p><a id="vjones" data-number="12" class="crew-name" href="#">Virginia Jones </a></p>
   
-                <p><a id="gaspar" data-number="77" class="crew-name" href="#">Chuck Gaspar </a></p>
+                <p><a id="gaspar" data-number="11" class="crew-name" href="#">Chuck Gaspar </a></p>
 
-                <p><a id="tyler" data-number="77" class="crew-name" href="#">Richard Tyler</a></p>
+                <p><a id="tyler" data-number="11" class="crew-name" href="#">Richard Tyler</a></p>
 
         </div>
 
