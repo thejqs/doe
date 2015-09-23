@@ -113,6 +113,16 @@ ul li:before {
     top: 0;
 }
 
+.arthur-choice-movies {
+    margin-top: 5%;
+    padding-bottom: 2px;
+    position: absolute;
+    margin-left: 35%;
+    text-align: center;
+    color: #CD5C5C;
+    font-family: "Open Sans Condensed", "Arial Narrow", sans-serif;
+    width: 30%;
+}
 
 @media only screen and (max-width: 1545px) and (min-width: 1000px) {
 
