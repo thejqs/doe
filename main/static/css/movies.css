@@ -27,10 +27,8 @@ ul li:before {
     display: block;
     text-align: left;
     padding: 10px;
-    /*padding-right: 10px;*/
     background-color: rgba(255, 235, 205, 0.9);
     border: 2px solid #808080;
-    /*top: 75px;*/
     width: 800px;
     margin-bottom: 15px;
     color: #808080;
@@ -166,32 +164,25 @@ ul li:before {
         font-family: "Open Sans Condensed", sans-serif;
     }
 
-    .timeline {
-        width: 100%;
-    }
-
-    .movie-details-inner {
-        position: absolute;
-        display: block;
-        text-align: left;
+    .movie-details {
+        margin: auto;
         padding-left: 10px;
         padding-right: 10px;
         padding-top: 0;
-        /*top: 75px;*/
-        right: 35%;
-        width: 300px;
+        width: 210px;
         margin-bottom: 15px;
     }
 
     .movie-details-inner img {
-        height: 300px;
+        width: 95%;
     }
 
     .movie-details-inner {
         position: absolute;
-        margin: auto;
+        text-align: left;
+        right: 2%;
         top: 0px;
-        width: 200px;
+        width: 250px;
     }
 
     .backdrop {
