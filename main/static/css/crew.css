@@ -15,13 +15,17 @@ body {
 
 .crew-text {
     color: #FFEBCD;
-    width: 50%;
+    width: 55%;
     display: block;
     text-align: center;
-    font-size: 25px;
+    font-size: 150%;
     font-family: "Open Sans Condensed", sans-serif;
     margin: auto;
     margin-bottom: 6%;
+}
+
+.crew-text p {
+    line-height: 160%;
 }
 
 .camera-set {
@@ -49,7 +53,6 @@ body {
     margin-right: 1%;
     padding: 1%;
     border-right: 1px dotted #FFEBCD;
-
 }
 
 .crew-name {
@@ -67,9 +70,6 @@ body {
 }
 
 .crew-name:hover {
-    text-decoration: none;
-    color: #FFEBCD;
-    font-family: "Open Sans Condensed", sans-serif;
     font-size: 200%;
 }
 
@@ -119,6 +119,33 @@ body {
     font-size: 15px;
 }
 
+.arthur-choice-crew {
+    margin-left: 35%;
+    margin-top: 55%;
+    padding-bottom: 2%;
+    text-align: center;
+    color: #CD5C5C;
+    font-family: "Open Sans Condensed", "Arial Narrow", sans-serif;
+    width: 30%;
+    position: absolute;
+}
+
+.footer-crew {
+    font-family: "Open Sans Condensed", "Arial Narrow", sans-serif;
+    font-size: 10px;
+    width: 95%;
+    text-align: right;
+    color: #FFEBCD;
+    bottom: -100%;
+    padding-bottom: 2px;
+    position: absolute;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: #FFEBCD;
+}
+
 /*.of-note-black {
     text-decoration: none;
     color: #CD5C5C;
@@ -126,20 +153,20 @@ body {
     font-size: 25px;*/
 
 
-@media only screen and (min-width: 1000px) and (max-width: 1545px) {
+@media only screen and (min-width: 1400px) and (max-width: 1600px) {
 
     .crew-coworkers {
         width: 20%;
         margin-left: 15%
     }
 
-    .camera-set {
+/*    .camera-set {
         margin-bottom: 10%;
-    }
-
-/*    .camera-set img {
-        height: 35px;
     }*/
+
+    .camera-set img {
+        width: 6.5%;
+    }
 
     .crew-number {
         font-size: 400%;
@@ -149,23 +176,71 @@ body {
         width: 65%;
     }
 
+    .crew-name {
+        font-size: 175%;
+        line-height: 125%;
+    }
+
+    .crew-name:hover {
+        font-size: 175%;
+    }
+
+    .crew-name-black {
+        font-size: 175%;
+        line-height: 125%;
+    }
+
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1399px) {
+/*    .arthur-choice-crew {
+        margin-top: 50%;
+    }*/
+
+    .arthur-choice-crew {
+        margin-top: 70%;
+    }
+
+    .crew-coworkers {
+        width: 25%;
+        margin-left: 8%;
+    }
+
+    .crew-name {
+        font-size: 150%;
+        line-height: 150%;
+    }
+
+    .crew-name:hover {
+        font-size: 150%;
+    }
+
+    .crew-name-black {
+        font-size: 150%;
+        line-height: 125%;
+    }
+
+    .camera-set img {
+        width: 6.5%;
+    }
+
 }
 
 @media only screen and (min-width: 807px) and (max-width: 999px) {
 
     .crew-text {
+        font-size: 125%;
         width: 77%;
     }
 
     .camera-set {
         /*border: 1px solid blue;*/
         width: 65%;
-        margin-bottom: 15%;
     }
 
-/*    .camera-set img {
-        height: 35px;
-    }*/
+    .arthur-choice-crew {
+        margin-top: 80%;
+    }
 
     .crew-coworkers {
         /*border: 1px solid red;*/
@@ -176,22 +251,38 @@ body {
     .crew-number {
         font-size: 400%;
     }
-    
-    body {
-        background-size: 125%;
+
+
+    .crew-name {
+        font-size: 150%;
+        line-height: 125%;
     }
 
+    .crew-name:hover {
+        font-size: 150%;
+    }
+
+    .crew-name-black {
+        font-size: 150%;
+        line-height: 125%;
+    }
+    
+    body {
+        background-size: 150%;
+    }
+
+/*    .footer-crew {
+        bottom: -300px;
+    }
+*/
 }
 
-@media only screen and (min-width: 421px) and (max-width: 806px) {
+@media only screen and (min-width: 590px) and (max-width: 806px) {
+
     .camera-set {
         width: 65%;
         margin-bottom: 15%;
     }
-
-/*    .camera-set img {
-        height: 28px;
-    }*/
 
     .crew-coworkers {
         margin-right: 1%;
@@ -201,47 +292,93 @@ body {
 
     .crew-text {
         width: 80%;
+        margin-bottom: 10%;
     }
 
     .crew-name {
-        font-size: 18px;
+        font-size: 110%;
     }
 
     .crew-name-black {
-        font-size: 18px;
+        font-size: 110%;
     }
 
     .crew-name:hover {
-        font-size: 18px;
+        font-size: 110%;
+    }
+
+    .arthur-choice-crew {
+        margin-top: 110%;
     }
 
     body {
         background-size: 235%;
     }
+
 }
+
+@media only screen and (min-width: 421px) and (max-width: 589px) {
+
+    .camera-set img {
+        width: 8%;
+    }
+
+    .camera-set {
+        width: 65%;
+    }
+
+    .crew-name {
+        font-size: 110%;
+    }
+
+    .crew-name-black {
+        font-size: 110%;
+    }
+
+    .crew-name:hover {
+        font-size: 110%;
+    }
+
+    .arthur-choice-crew {
+        margin-top: 225%;
+        margin-bottom: 5%;
+    }
+
+    body {
+        background-size: 250%;
+    }
+
+    .crew-coworkers {
+        margin-right: .5%;
+        width: 25%;
+        margin-left: 2%;
+    }
+
+}
+
 
 @media only screen and (min-width: 320px) and (max-width: 420px) {
 
     .crew-text {
         width: 75%;
+        margin-bottom: 20%;
     }
 
 
     .camera-set {
-        width: 65%;
+        width: 63%;
         margin-bottom: 25%;
     }
 
-
- /*   .camera-set img {
-        height: 23px;
-    }*/
+    .camera-set img {
+        width: 9.5%;
+    }
 
 
     .crew-coworkers {
         /*border: 1px solid blue;*/
-        margin-left: 2%;
-        width: 25%;
+        margin-left: 1%;
+        width: 28%;
     }
 
     .crew-name {
@@ -267,12 +404,13 @@ body {
         font-size: 12px
     }
 
-/*    .of-note {
-        font-size: 15px;
+    .arthur-choice-crew {
+        margin-top: 245%;
     }
 
-    .coworker-of-note {
-        font-size: 10px;
-    }*/
+    body {
+        background-size: 300%;
+    }
+
 
 }

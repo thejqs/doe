@@ -70,25 +70,26 @@ p {
     margin: auto;
 }
 
+.doe-text p {
+    line-height: 150%;
+}
+
 span {
     display: inline-block;
     text-align: center;
     color: #CD5C5C;
 }
 
-.footer {
+/*.footer {
     font-family: "Open Sans Condensed", "Arial Narrow", sans-serif;
     font-size: 10px;
-    width: 40%;
+    width: 95%;
     text-align: right;
-    margin-left: 30%;
     color: #FFEBCD;
+    bottom: -100%;
     padding-bottom: 2px;
-    line-height: 12px;
-    bottom: 0;
-    border-top: 1px solid #FFEBCD;
-    position: relative;
-}
+    position: absolute;
+}*/
 
 .footer-link {
     text-decoration: none;
@@ -102,7 +103,7 @@ span {
     }
 
     .doe-text {
-        width: 65%;
+        width: 60%;
     }
 
 }

@@ -22,11 +22,6 @@ ul li:before {
     display: none;
 }
 
-/*.coworker-details {
-    display: none;
-}*/
-
-
 .movie-details-inner {
     position: absolute;
     display: block;
