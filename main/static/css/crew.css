@@ -71,6 +71,7 @@ body {
 
 .crew-name:hover {
     font-size: 200%;
+    color: #FFEBCD;
 }
 
 .crew-name-black {
@@ -183,6 +184,7 @@ body {
 
     .crew-name:hover {
         font-size: 175%;
+        color: #FFEBCD;
     }
 
     .crew-name-black {
@@ -213,11 +215,14 @@ body {
 
     .crew-name:hover {
         font-size: 150%;
+        color: #FFEBCD;
+        line-height: 150%;
+
     }
 
     .crew-name-black {
         font-size: 150%;
-        line-height: 125%;
+        line-height: 150%;
     }
 
     .camera-set img {
@@ -260,6 +265,8 @@ body {
 
     .crew-name:hover {
         font-size: 150%;
+        line-height: 125%;
+        color: #FFEBCD;
     }
 
     .crew-name-black {
@@ -305,6 +312,7 @@ body {
 
     .crew-name:hover {
         font-size: 110%;
+        color: #FFEBCD;
     }
 
     .arthur-choice-crew {
@@ -389,6 +397,7 @@ body {
     .crew-name:hover {
         font-size: 18px;
         margin-right: 3px;
+        color: #FFEBCD;
     }
 
     .crew-name-black {
