@@ -82,13 +82,7 @@ class CastMember(models.Model):
     #     ]
 
     def __unicode__(self):
-        return self.name, self.movie_set.movie #, self.character
-
-
-# class JobTitleOnMovie(models.Model):
-#     crew_member = models.ForeignKey('CrewMember')
-#     movie = models.ForeignKey('Movie')
-#     job_title = models.CharField(max_length=200)
+        return self.name, self.movie_set.movie  # self.character
 
 
 class CrewMember(models.Model):

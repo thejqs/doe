@@ -7,3 +7,4 @@ admin.site.register(Movie)
 admin.site.register(CrewMember)
 admin.site.register(CastMember)
 admin.site.register(ArthurGrandchild)
+

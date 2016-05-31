@@ -4,30 +4,26 @@ var cameraSet = document.getElementById('camera-set');
 
 for (var x = 1; x <= 88; x++) {
     var img = document.createElement('IMG');
-    img.id = 'movie' + x
+    img.id = 'movie' + x;
     img.src = '/static/img/movie-camera-off-white.png';
     cameraSet.appendChild(img);
-}
+};
 
+var highlighted = false;
 
-var highlighted = false
-
-// Puts reset of the full icon set into one callable place
+// Puts reset of the full icon set into one callable place;
+// no, magic numbers are not ideal
 var reset = function() {
     for (var x = 1; x <= 88; x++) {
-        var img = document.getElementById('movie' + x)
+        var img = document.getElementById('movie' + x);
         img.style.display = 'inline';
         img.src = '/static/img/movie-camera-off-white.png';
-    }
-
+    };
     highlighted = false;
-    
-}
-
+};
 
 var currentID = ""
 var currentCrewID = ""
-
 var workerLinks = document.getElementsByClassName('crew-name')
 
 // This event listener gets more complicated the more complex the page gets.
@@ -42,21 +38,21 @@ for(var i = 0; i < workerLinks.length; i++) {
             document.getElementById(select).style.display = 'none'
         } else {
             document.getElementById(select).style.display = 'inline'
-        }
+        };
 
         // resets the name class and the icon set on a click on another name
         if(currentID != '' && currentID != this.id) {
-            document.getElementById(currentID).className = 'crew-name'
+            document.getElementById(currentID).className = 'crew-name';
             reset();
-        }
+        };
 
-        currentID = this.id
+        currentID = this.id;
 
         // resets the name class on a second click on the same name
         if(currentCrewID != '' && currentCrewID != select) {
             document.getElementById(currentCrewID).style.display = 'none'
             reset();
-        }
+        };
 
         currentCrewID = select
 
@@ -67,8 +63,10 @@ for(var i = 0; i < workerLinks.length; i++) {
             return;
         }
 
-        // switches name class on first click for highlighting 
-        // and displays the the correct number of icons
+        // switches name class on first click for highlighting
+        // and displays the the correct number of icons;
+        // someday I'll figure out why number + 1 didn't work
+        // but number - -1 did.
         highlighted = true;
         this.className = 'crew-name-black'
         var number = this.getAttribute('data-number');
@@ -229,4 +227,3 @@ for(var i = 0; i < workerLinks.length; i++) {
 //     }
 //   };
 //   $(window).resize(makeNarrow());
-

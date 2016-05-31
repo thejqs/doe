@@ -187,9 +187,10 @@ class Scraper():
     def scrape():
         movie_links = Scraper.capture_filmography("http://www.imdb.com/name/nm0681250/?ref_=fn_al_nm_1")
 
-        Movie.objects.all().delete()
-        CastMember.objects.all().delete()
-        CrewMember.objects.all().delete()
+        # lines to uncomment when we need to start with a fresh database
+        # Movie.objects.all().delete()
+        # CastMember.objects.all().delete()
+        # CrewMember.objects.all().delete()
 
         for movie, href in movie_links.items():
             # this is the only TV show on this particular list.
